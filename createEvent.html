@@ -12,7 +12,7 @@
 
     <!-- Meu css -->
     <link rel="stylesheet" href="src/css/reset.css" />
-    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/createEvent.css"/>
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,42 +28,40 @@
   </head>
   <body>
     <nav>
-      <div class="hamburger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
       <div>
-        <a href="index.html">
-          <img class="logo" src="src/img/Logo.png" alt="Logo escrito Fiap Arena" />
+        <a href="home.html">
+          <img
+            class="logo"
+            src="src/img/Logo.png"
+            alt="Logo escrito Fiap Arena"
+          />
         </a>
       </div>
+      <div>
         <ul class="navbar">
-          <li class="navbar-itens"><a href="index.html">Home</a></li>
-          <li class="navbar-itens active"><a href="createEvent.html">Criar Torneio</a></li>
-          <li class="navbar-itens"><a href="">Ao Vivo</a></li>
-          <li class="navbar-itens"><a href="">Contact Us</a></li>
+          <li class="navbar-itens"><a href="home.html">Home</a></li>
+          <li class="navbar-itens active">
+            <a href="createEvent.html">Criar Torneio</a>
+          </li>
+          <li class="navbar-itens"><a href="ranking.html">Ranking</a></li>
+          <li class="navbar-itens"><a href="/">Contact Us</a></li>
         </ul>
-      <div class="profile">
+      </div>
+      <a href="profile.html" class="profile">
         <div class="profile-text">
           <div class="profile-title">Title</div>
           <div class="profile-description">Descrition</div>
         </div>
         <div class="profile-div-img">
-          <img class="profile-img" src="src/img/profileImage.svg" alt="Foto de Perfil" />
+          <img
+            class="profile-img"
+            src="src/img/profileImage.svg"
+            alt="Foto de Perfil"
+          />
         </div>
-      </div>
+      </a>
     </nav>
-    
-    <div class="mobile-menu">
-      <ul class="mobile-navbar">
-        <li class="mobile-navbar-item"><a href="index.html">Home</a></li>
-        <li class="mobile-navbar-item active"><a href="createEvent.html">Criar Torneio</a></li>
-        <li class="mobile-navbar-item"><a href="">Ao Vivo</a></li>
-        <li class="mobile-navbar-item"><a href="">Contact Us</a></li>
-      </ul>
-    </div>
-    
+
     <section class="main">
       <div><h1 class="main-title">NOVO TORNEIO</h1></div>
       <form class="tournament" action="post">
@@ -111,7 +109,7 @@
 
         <div class="btn-div">
           <button class="btn btn-cancelar">Cancelar</button>
-          <button class="btn btn-salvar">Salvar</button>
+          <a href="Tournament.html" class="btn btn-salvar">Salvar</a>
         </div>
       </form>
 
@@ -227,6 +225,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
-    <script src="src/js/script.js"></script>
+    <script src="src/js/createEvent.js"></script>
   </body>
 </html>
