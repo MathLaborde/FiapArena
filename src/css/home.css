@@ -1,210 +1,194 @@
 :root {
-    --primary-color: #f20675; 
-    --secundary-color: #07F3F3;
+  --primary-color: #f20675;
+  --secundary-color: #07f3f3;
 }
 
 body {
-    position: relative;
-    z-index: 0;
-    color: #fff;
-    /* background-image: url('./../img/Counter\ Strike.png'); */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
-    /* background-position: center center; */
+  position: relative;
+  z-index: 0;
+  color: #fff;
+  background-image: url('./../img/Counter\ Strike.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.nav-bar {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .main-content {
-    padding: 50px 20px;
-    text-align: center;
+  padding: 50px 20px;
+  text-align: center;
 }
 
-
 .main-title {
-    font-size: 50px;
-    font-family: "Bungee", sans-serif;
-    margin-bottom: 30px;
-    background: linear-gradient(to bottom, var(--primary-color), var(--secundary-color));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: relative;
-    z-index: 1;
-    padding: 10px 20px;
+  font-size: 50px;
+  font-family: 'Bungee', sans-serif;
+  margin-bottom: 30px;
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secundary-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 10;
+  padding: 10px 20px;
 }
 
 .carousel-container {
-    display: flex;
-    width: 100%;
-    box-shadow: 0 0 20px #212226;
-    background-color: transparent;
-    justify-content: space-between;
-    border-radius: 8px;
+  display: flex;
+  width: 100%;
+  box-shadow: 0 0 20px #212226;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: space-between;
+  border-radius: 8px;
 }
 
 .carousel {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30%;
-    padding: 30px;
-    background-color: transparent;
-    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25%;
+  padding: 30px;
+  background-color: transparent;
+  border-radius: 8px;
 }
 
 .carousel img {
-    width: 100%;
-    cursor: pointer;
-    margin-bottom: 30px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    border-radius: 15px;
+  width: 100%;
+  height: 100px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 15px;
 }
 
 .carousel img:hover {
-    transform: scale(1.05);
-    filter: brightness(0.7);
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.267);
 }
 
 .carousel-thumbnail {
-    width: 120px;
-    height: 250px;
-    object-fit: cover;
-    margin-right: 20px;
-    border: 2px solid transparent;
-    cursor: pointer;
-    background-color: transparent;
-    border-radius: 15px;
+  width: 120px;
+  height: 250px;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 15px;
 }
 
 .carousel-thumbnail.active {
-    border: 4px solid orange
+  border: 4px solid orange;
 }
 
 .display-area {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    border-radius: 15px;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  border-radius: 15px;
 }
 
 .display-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: transparent;
+  position: relative;
+  width: 100%;
+  height: 710px;
+  background: transparent;
 }
 
 .display-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .text-container {
-    width: 50%;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 5%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.1);
-    background-color: transparent;
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: right;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 50%;
+  position: absolute;
+  top: 75%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: right;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .large-text {
-    color: orange;
-    font-family: "Bungee", sans-serif;
-    font-size: 2.6em;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    background-color: transparent;
-    backdrop-filter: blux(10px);
+  color: orange;
+  font-family: 'Bungee', sans-serif;
+  font-size: 2.6em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+  backdrop-filter: blux(10px);
 }
 
 .image-text {
-    color: white;
-    font-weight: bold;
-    font-size: 2em;
-    padding: 10px;
-    margin-bottom: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    background-color: transparent;
-    backdrop-filter: blux(10px);
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 10px;
+  margin-bottom: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+  backdrop-filter: blux(10px);
 }
 
 .additional-text {
-    color: white;
-    font-size: 1.6em;
-    background: rgba(255, 255, 255, 0.1);
-    background-color: transparent;
-    backdrop-filter: blux(10px);
+  color: white;
+  font-size: 1.6em;
+  background: rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+  backdrop-filter: blux(10px);
 }
 
 .explore-button {
-    background-color: orange;
-    color: black;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    display: inline-block;
-    
+  background-color: orange;
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  display: inline-block;
 }
 
 .explore-button:hover {
-    background-color: darkorange;
+  background-color: darkorange;
 }
 
-@media(max-width:768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar .logo {
-        margin-bottom: 10px;
-    }
-
-    .navbar .profile {
-        margin-top: 10px;
-    }
-
-    .navbar .buttons {
-        margin-top: 10px;
-    }
-
-    .profile-table {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .info-row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .info-label {
-        text-align: left;
-    }
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
+.conteudo-footer {
+  background-color: rgba(0, 0, 0, 0.4);
 }
