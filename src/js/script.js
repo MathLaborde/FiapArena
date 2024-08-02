@@ -70,3 +70,21 @@ function toggleMenu() {
   bars[1].classList.toggle('rotate2');
   bars[2].classList.toggle('rotate3');
 }
+
+function escapeScriptTags(input) {
+  return input.replace(/>/g, '&amp;').replace(/</g, '&lt;');
+}
+
+const chat = document.getElementById('chat');
+
+const chatBnt = document.getElementById('enviar-chat');
+
+chatBnt.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  if (chat.length <= 0) {
+    return;
+  }
+
+  const message = escapeScriptTags(chat.value);
+});

@@ -34,8 +34,6 @@
       src="https://kit.fontawesome.com/92f82bc9ac.js"
       crossorigin="anonymous"
     ></script>
-
-    <script src="./src/js/profile.js"></script>
   </head>
 
   <body>
@@ -128,16 +126,22 @@
           <div class="profile-info">
             <div class="info-row">
               <div class="info-label">NOME :</div>
-              <div class="info-field">
-                <input type="text" id="name" placeholder="Nome" />
-              </div>
+              <input
+                class="info-field"
+                type="text"
+                id="name"
+                placeholder="Nome"
+              />
             </div>
 
             <div class="info-row">
               <div class="info-label">CURSO :</div>
-              <div class="info-field">
-                <input type="text" id="course" placeholder="Curso" />
-              </div>
+              <input
+                class="info-field"
+                type="text"
+                id="course"
+                placeholder="Curso"
+              />
             </div>
           </div>
         </div>
@@ -145,10 +149,12 @@
     </div>
 
     <div class="form-container">
+      <h1 class="title-password">Mudar senha:</h1>
+
       <input type="text" id="current-password" placeholder="Senha Atual" />
       <input type="password" id="new-password" placeholder="Alterar Senha" />
       <br />
-      <input type="email" id="email" placeholder="Email" />
+      <!-- <input type="email" id="email" placeholder="Email" /> -->
       <br />
       <button class="cancel-button">Cancelar</button>
       <button class="submit-button" onclick="submitForm()">Enviar</button>
@@ -224,5 +230,8 @@
       </div>
     </footer>
     <!-- AQUI TTERMINA O FOOTER -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./src/js/perfil.js"></script>
   </body>
 </html>

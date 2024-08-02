@@ -103,7 +103,7 @@
       <div>
         <h1 class="main-title">NOVO TORNEIO</h1>
       </div>
-      <form class="tournament" action="post">
+      <form class="tournament" id="tournament" action="post">
         <div>
           <label for="tournament-name">Nome do torneio</label>
           <input
@@ -128,9 +128,8 @@
           <label for="tournament-text">Imagem</label>
           <input
             class="input"
-            placeholder=""
-            id="tournament-text"
-            rows="4"
+            id="tournament-img"
+            accept="image/*"
             type="file"
           />
           <span class="" hidden>Favor Preencher o campo</span>
@@ -148,7 +147,7 @@
 
         <div class="btn-div">
           <button class="btn btn-cancelar">Cancelar</button>
-          <a href="Tournament.html" class="btn btn-salvar">Salvar</a>
+          <button class="btn btn-salvar">Salvar</button>
         </div>
       </form>
 
@@ -227,6 +226,7 @@
     <!-- AQUI TTERMINA O FOOTER -->
 
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="src/js/createEvent.js"></script>
   </body>
 </html>
