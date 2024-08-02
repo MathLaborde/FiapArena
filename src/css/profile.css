@@ -76,7 +76,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.container {
+.container-principal {
     background-color: transparent;
     color: white;
     display: flex;
@@ -91,7 +91,7 @@ body {
     flex-wrap: wrap;
 }
 
-.container img {
+.container-principal img {
     position: absolute;
     top: 0;
     left: 0;
