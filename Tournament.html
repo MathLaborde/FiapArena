@@ -1,241 +1,264 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fiap Arena</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiap Arena</title>
 
-    <!-- Meu css -->
-    <link rel="stylesheet" href="src/css/reset.css" />
-    <link rel="stylesheet" href="src/css/style.css" />
+  <!-- Link com o RESET -->
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <!-- Link com o ESTILO DO HEADER -->
+  <link rel="stylesheet" href="./src/css/header.css">
+  <!-- Link com o ESTILO DO CONTEÚDO  -->
+  <link rel="stylesheet" href="./src/css/tournament.css">
+  <!-- Link com o ESTILO DO FOOTER -->
+  <link rel="stylesheet" href="./src/css/footer.css">
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
 
-    <script src="https://kit.fontawesome.com/92f82bc9ac.js" crossorigin="anonymous"></script>
-    
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <nav>
-      <div>
-        <a href="index.html">
-          <img
-            class="logo"
-            src="src/img/Logo.png"
-            alt="Logo escrito Fiap Arena"
-          />
-        </a>
+  <script src="https://kit.fontawesome.com/92f82bc9ac.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- AQUI COMEÇA O HEADER -->
+  <header>
+    <nav class="nav-bar">
+      <div class="logo">
+        <a href="home.html"><img src="src/img/Logo.png" alt="Logo escrito Fiap Arena"></a>
       </div>
-      <div>
-        <ul class="navbar">
-          <li class="navbar-itens"><a href="home.html">Home</a></li>
-          <li class="navbar-itens"><a href="createEvent.html">Criar Torneio</a></li>
-          <li class="navbar-itens"><a href="">Ao Vivo</a></li>
-          <li class="navbar-itens"><a href="">Contact Us</a></li>
+
+      <div class="nav-list">
+        <ul>
+          <li class="nav-item"><a class="nav-link" href="./home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./createEvent.html">Criar Torneio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./ranking.html">Ranking</a></li>
+          <li class="nav-item"><a class="nav-link" href="./Tournament.html">Contact Us</a></li>
         </ul>
       </div>
-      <div class="profile">
-        <div class="profile-text">
-          <div class="profile-title">Title</div>
-          <div class="profile-description">Descrition</div>
+
+
+      <div class="container">
+        <div class="text">
+          <a class="text-link" href="#">Title</a>
+          <a class="text-link" href="#">Descripton</a>
         </div>
-        <div class="profile-div-img">
-          <img
-            class="profile-img"
-            src="src/img/profileImage.svg"
-            alt="Foto de Perfil"
-          />
+
+        <div>
+          <a href="#" id="perfil-icon">
+            <img class="profile-img" src="src/img/profileImage.svg" alt="Foto de Perfil">
+          </a>
         </div>
+      </div>
+
+      <div class="mobile-menu-icon">
+        <button onclick="mostrarMenu()"><img class="icon" src="./src/img/menu_white_36dp.svg" alt=""></button>
       </div>
     </nav>
 
-    <div class="main-content">
-      <div class="image-background">
-          <img src="./src/img/fundo.jpg" alt="plano de fundo">
-      </div>
-      <div class="text-overlay">
-          <h1 class="main-title">Gamer's Gauntlet</h1>
-          <h2 class="main-description">Esse torneio é voltado para estudantes da FIAP de níveis Prata e Ouro. Os
-              participantes terão a chance de mostrar suas habilidades e competir por um prêmio exclusivo: um passe de
-              skins raras. Junte-se a nós para esta batalha épica e prove que você é o melhor campeão da FIAP!</h2>
-      </div>
+    <div class="mobile-menu">
+      <ul>
+        <li class="nav-item"><a class="nav-link" href="./home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./createEvent.html">Criar Torneio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Ranking</a></li>
+        <li class="nav-item"><a class="nav-link" href="./Tournament.html">Contact Us</a></li>
+        <a href="#"><button class="button">Perfil</button></a>
+      </ul>
+    </div>
+  </header>
+  <!-- AQUI TERMINA O HEADER -->
+
+  <div class="main-content">
+    <div class="image-background">
+      <img src="./src/img/fundo.jpg" alt="plano de fundo">
+    </div>
+    <div class="text-overlay">
+      <h1 class="main-title">Gamer's Gauntlet</h1>
+      <h2 class="main-description">Esse torneio é voltado para estudantes da FIAP de níveis Prata e Ouro. Os
+        participantes terão a chance de mostrar suas habilidades e competir por um prêmio exclusivo: um passe de
+        skins raras. Junte-se a nós para esta batalha épica e prove que você é o melhor campeão da FIAP!</h2>
+    </div>
   </div>
   <div class="down-arrow"></div>
 
-      <div class="bottons">
-          <div class="btn1">Ver regras</div>
-          <div class="btn2">Ver Participantes</div>
-          <div class="btn3">Ver premiação</div>
+  <div class="bottons">
+    <div class="btn1">Ver regras</div>
+    <div class="btn2">Ver Participantes</div>
+    <div class="btn3">Ver premiação</div>
+  </div>
+
+  <div class="container">
+    <div class="teams-content">
+
+      <h2 class="team1-title">Time 1</h2>
+      <h2 class="team2-title">Time 2</h2>
+
+      <div class="team1">
+        <ul class="team-list">
+          <li>
+            <a href="#" class="profile-link">
+              <img src="./src/img/profile.jpg" alt="Joao" class="profile-pic"> Joao
+            </a>
+          </li>
+          <li>
+            <a href="#" class="profile-link">
+              <img src="./src/img/profile.jpg" alt="Maria" class="profile-pic"> Maria
+            </a>
+          </li>
+          <li>
+            <a href="#" class="profile-link">
+              <img src="./src/img/profile.jpg" alt="Gabriel" class="profile-pic"> Gabriel
+            </a>
+          </li>
+          <li>
+            <a href="#" class="profile-link">
+              <img src="./src/img/profile.jpg" alt="Joquina" class="profile-pic"> Joquina
+            </a>
+          </li>
+          <li>
+            <a href="#" class="profile-link">
+              <img src="./src/img/profile.jpg" alt="Fernanda" class="profile-pic"> Fernanda
+            </a>
+          </li>
+        </ul>
       </div>
 
-    <div class="container">
-        <div class="teams-content">
-
-          <h2 class="team1-title">Time 1</h2>
-          <h2 class="team2-title">Time 2</h2>
-
-          <div class="team1">
-            <ul class="team-list">
-              <li>
-                <a href="#" class="profile-link">
-                  <img src="./src/img/profile.jpg" alt="Joao" class="profile-pic"> Joao
-                </a>
-              </li>
-              <li>
-                <a href="#" class="profile-link">
-                  <img src="./src/img/profile.jpg" alt="Maria" class="profile-pic"> Maria
-                </a>
-              </li>
-              <li>
-                <a href="#" class="profile-link">
-                  <img src="./src/img/profile.jpg" alt="Gabriel" class="profile-pic"> Gabriel
-                </a>
-              </li>
-              <li>
-                <a href="#" class="profile-link">
-                  <img src="./src/img/profile.jpg" alt="Joquina" class="profile-pic"> Joquina
-                </a>
-              </li>
-              <li>
-                <a href="#" class="profile-link">
-                  <img src="./src/img/profile.jpg" alt="Fernanda" class="profile-pic"> Fernanda
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          <div class="chat-box">
-            <div class="chat-header">Chat</div>
-            <div class="chat-content">
-              <div class="message"><span class="user">Joao:</span> Olá!</div>
-              <div class="message"><span class="user">Maria:</span> Tudo bem?</div>
-            </div>
-            <div class="chat-input">
-              <input type="text" placeholder="Digite sua mensagem..." />
-              <button>Enviar</button>
-            </div>
-          </div>
-
-          
-          <div class="team2">
-            <ul class="team-list">
-              <li>
-                <a href="#" class="profile-link">
-                  <img src="./src/img/profile.jpg" alt="Joao" class="profile-pic"> Pato Donald
-                </a>
-              </li>
-              <li>
-                <a href="#" class="profile-link">
-                  <img src="./src/img/profile.jpg" alt="Maria" class="profile-pic"> Mickey
-                </a>
-              </li>
-              <li>
-                <a href="#" class="profile-link">
-                  <img src="./src/img/profile.jpg" alt="Gabriel" class="profile-pic"> Thor
-                </a>
-              </li>
-              <li>
-                <a href="#" class="profile-link">
-                  <img src="./src/img/profile.jpg" alt="Joquina" class="profile-pic"> Wolverine
-                </a>
-              </li>
-              <li>
-                <a href="#" class="profile-link">
-                  <img src="./src/img/profile.jpg" alt="Fernanda" class="profile-pic"> Spiderman
-                </a>
-              </li>
-            </ul>
-          </div>
-
+      <div class="chat-box">
+        <div class="chat-header">Chat</div>
+        <div class="chat-content">
+          <div class="message"><span class="user">Joao:</span> Olá!</div>
+          <div class="message"><span class="user">Maria:</span> Tudo bem?</div>
+        </div>
+        <div class="chat-input">
+          <input type="text" placeholder="Digite sua mensagem..." />
+          <button>Enviar</button>
+        </div>
       </div>
 
-      <div class="teams-award">
-        O prêmio será um novo pacote de Skins para a personagem Soraka
+
+      <div class="team2">
+        <ul class="team-list">
+          <li>
+            <a href="#" class="profile-link">
+              <img src="./src/img/profile.jpg" alt="Joao" class="profile-pic"> Pato Donald
+            </a>
+          </li>
+          <li>
+            <a href="#" class="profile-link">
+              <img src="./src/img/profile.jpg" alt="Maria" class="profile-pic"> Mickey
+            </a>
+          </li>
+          <li>
+            <a href="#" class="profile-link">
+              <img src="./src/img/profile.jpg" alt="Gabriel" class="profile-pic"> Thor
+            </a>
+          </li>
+          <li>
+            <a href="#" class="profile-link">
+              <img src="./src/img/profile.jpg" alt="Joquina" class="profile-pic"> Wolverine
+            </a>
+          </li>
+          <li>
+            <a href="#" class="profile-link">
+              <img src="./src/img/profile.jpg" alt="Fernanda" class="profile-pic"> Spiderman
+            </a>
+          </li>
+        </ul>
       </div>
 
-      <div class="teams-rules">
-        Proibição de Magia: Personagens mágicos não são permitidos durante a partida.
-      </div>
     </div>
-      <!-- <div id="editor"></div> -->
-    </section>
 
-    <footer>
-      <div class="conteudo-footer">
-          <div class="midias">
-              <img src="./src/img/Logo.png" alt="Logo do Fiap Arena">
-          
-              <div class="icones-midia">
-                  <a href="#" id="twitter">
-                      <i class="fa-brands fa-x-twitter"></i>
-                  </a>
+    <div class="teams-award">
+      O prêmio será um novo pacote de Skins para a personagem Soraka
+    </div>
 
-                  <a href="#" id="instagram">
-                      <i class="fa-brands fa-instagram"></i>
-                  </a>
+    <div class="teams-rules">
+      Proibição de Magia: Personagens mágicos não são permitidos durante a partida.
+    </div>
+  </div>
+  <!-- <div id="editor"></div> -->
+  </section>
 
-                  <a href="#" id="youtube">
-                      <i class="fa-brands fa-youtube"></i>
-                  </a>
+  <!-- AQUI COMECA O FOOTER -->
+  <footer>
 
-                  <a href="#" id="linkedin">
-                      <i class="fa-brands fa-linkedin"></i>
-                  </a>
-              </div>
-          </div>
+    <div class="conteudo-footer">
 
-          <ul class="footer-list">
-              <li><h3>Use Cases</h3></li>
+      <div class="midias">
+        <a href="home.html"><img src="src/img/Logo.png" alt="Logo escrito Fiap Arena"></a>
+        <div class="icones-midia">
+          <a href="#" id="twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
 
-              <li><a href="#" class="footer-link">UI Design</a></li>
-              <li><a href="#" class="footer-link">UX Design</a></li>
-              <li><a href="#" class="footer-link">Wireframing</a></li>
-              <li><a href="#" class="footer-link">Diagramming</a></li>
-              <li><a href="#" class="footer-link">Brainstorming</a></li>
-              <li><a href="#" class="footer-link">Online Whiteboard</a></li>
-              <li><a href="#" class="footer-link">Team Collaboaton</a></li>
-          </ul>
+          <a href="#" id="instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
 
-          <ul class="footer-list">
-              <li><h3>Explore</h3></li>
+          <a href="#" id="youtube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
 
-              <li><a href="#" class="footer-link">Design</a></li>
-              <li><a href="#" class="footer-link">Prototyping</a></li>
-              <li><a href="#" class="footer-link">Development Features</a></li>
-              <li><a href="#" class="footer-link">Design Systems</a></li>
-              <li><a href="#" class="footer-link">Collaboaton Features</a></li>
-              <li><a href="#" class="footer-link">Design Process</a></li>
-              <li><a href="#" class="footer-link">FigJam</a></li>
-          </ul>
-
-          <ul class="footer-list">
-              <li><h3>Resources</h3></li>
-
-              <li><a href="#" class="footer-link">Blog</a></li>
-              <li><a href="#" class="footer-link">Best Practices</a></li>
-              <li><a href="#" class="footer-link">Colors</a></li>
-              <li><a href="#" class="footer-link">Color Wheel</a></li>
-              <li><a href="#" class="footer-link">Suport</a></li>
-              <li><a href="#" class="footer-link">Developers</a></li>
-              <li><a href="#" class="footer-link">Resource Library</a></li>
-          </ul>
+          <a href="#" id="linkedin">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
       </div>
+
+      <ul class="footer-list">
+        <li>
+          <h3>Use Cases</h3>
+        </li>
+
+        <li><a href="#" class="footer-link">UI Design</a></li>
+        <li><a href="#" class="footer-link">UX Design</a></li>
+        <li><a href="#" class="footer-link">Wireframing</a></li>
+        <li><a href="#" class="footer-link">Diagramming</a></li>
+        <li><a href="#" class="footer-link">Brainstorming</a></li>
+        <li><a href="#" class="footer-link">Online Whiteboard</a></li>
+        <li><a href="#" class="footer-link">Team Collaboaton</a></li>
+      </ul>
+
+      <ul class="footer-list">
+        <li>
+          <h3>Explore</h3>
+        </li>
+
+        <li><a href="#" class="footer-link">Design</a></li>
+        <li><a href="#" class="footer-link">Prototyping</a></li>
+        <li><a href="#" class="footer-link">Development Features</a></li>
+        <li><a href="#" class="footer-link">Design Systems</a></li>
+        <li><a href="#" class="footer-link">Collaboaton Features</a></li>
+        <li><a href="#" class="footer-link">Design Process</a></li>
+        <li><a href="#" class="footer-link">FigJam</a></li>
+      </ul>
+
+      <ul class="footer-list">
+        <li>
+          <h3>Resources</h3>
+        </li>
+
+        <li><a href="#" class="footer-link">Blog</a></li>
+        <li><a href="#" class="footer-link">Best Practices</a></li>
+        <li><a href="#" class="footer-link">Colors</a></li>
+        <li><a href="#" class="footer-link">Color Wheel</a></li>
+        <li><a href="#" class="footer-link">Suport</a></li>
+        <li><a href="#" class="footer-link">Developers</a></li>
+        <li><a href="#" class="footer-link">Resource Library</a></li>
+      </ul>
+
+    </div>
+
   </footer>
+  <!-- AQUI TTERMINA O FOOTER -->
 
   <script src="./src/js/script.js"></script>
-  </body>
+</body>
+
 </html>

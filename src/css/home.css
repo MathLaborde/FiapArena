@@ -1,84 +1,16 @@
-* {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #212226;
+:root {
+    --primary-color: #f20675; 
+    --secundary-color: #07F3F3;
 }
 
-/*Estilo para garantir que o conteúdo da página ainda seja legível*/
 body {
     position: relative;
     z-index: 0;
     color: #fff;
-    background-image: url('./../img/Counter\ Strike.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.main-content, footer {
-    position: relative;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.5); /* Fundo semitrasnparente para melhor legilibilidade*/
-    backdrop-filter: blur(10px); /*  Desfoque para o fundo  */
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    flex-wrap: wrap;
-    cursor: pointer;
-    border-bottom: 0.5px solid white;
-    position: relative;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.8); /* Adicionando um fundo semitransparente para legibilidade   */
-    backdrop-filter: blur(5px); /* Desfoque para o fundo  */
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-.navbar .principal {
-    border-radius: 8px;
-    border-bottom: 3px solid var(--primary-color);
-}
-
-.navbar a active {
-    border-radius: 8px;
-    border-bottom: 3px solid var(--primary-color);
-}
-
-.navbar a:hover {
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 8px;
-    background: var(--primary-color);
-    transition: all ease-in-out 300ms;
-}
-
-.navbar .logo img {
-    width: 200px;
-    height: auto;
-}
-
-.navbar .profile {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.navbar .profile img {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-    background-color: var(--secundary-color);
+    /* background-image: url('./../img/Counter\ Strike.png'); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center center; */
 }
 
 .main-content {
@@ -86,10 +18,6 @@ body {
     text-align: center;
 }
 
-:root {
-    --primary-color: #f20675; 
-    --secundary-color: #07F3F3;
-}
 
 .main-title {
     font-size: 50px;
@@ -241,71 +169,6 @@ body {
 
 .explore-button:hover {
     background-color: darkorange;
-}
-
-footer {
-    width: 100%;
-    color: #FFFFFF;
-    border-top: 0.5px solid white;
-}
-
-.midias img {
-    width: 150px;
-    height: auto;
-}
-
-.conteudo-footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 30px 35px;
-}
-
-.midias h3 {
-    margin-bottom: 10px;
-}
-
-.icones-midia {
-    font-size: 20px;
-    display: flex;
-    gap: 15px;
-}
-
-.icones-midia a {
-    color: #FFFFFF;
-    transition: all 0.5s;
-}
-
-#twitter:hover {
-    color: orange
-}
-
-#instagram:hover {
-    color: #ae228e;
-}
-
-#youtube:hover {
-    color: #c4302b;
-}
-
-#linkedin:hover {
-    color: #0e76a8;
-}
-
-.footer-list {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    gap: 7px;
-}
-
-.footer-list h3 {
-    margin-bottom: 15px;
-}
-
-.footer-link {
-    text-decoration: none;
-    color: #FFFFFF;
-    opacity: 70%;
 }
 
 @media(max-width:768px) {

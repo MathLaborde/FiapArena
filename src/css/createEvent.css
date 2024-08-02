@@ -21,81 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: var(--nav-size);
   margin: 0;
-}
-
-nav {
-  width: 100%;
-  height: var(--nav-size);
-  background: var(--bg);
-  display: flex;
-  padding: 24px 32px;
-  border-bottom: var(--border-nav);
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  height: 35px;
-  cursor: pointer;
-}
-
-.navbar {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.navbar-itens {
-  padding: 8px;
-  cursor: pointer;
-}
-
-.navbar-itens:hover {
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 8px;
-  background: var(--primary-color);
-  transition: all ease-in-out 300ms;
-}
-
-.navbar-itens.active {
-  border-radius: 8px;
-  border-bottom: 3px solid var(--primary-color);
-}
-
-.profile {
-  display: flex;
-  width: 190px;
-  justify-content: end;
-  align-items: center;
-  height: 40px;
-  gap: 12px;
-  cursor: pointer;
-}
-
-.profile-text {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 40px;
-}
-
-.profile-description {
-  font-size: 14px;
-}
-
-.profile-div-img {
-  height: 40px;
-}
-
-.profile-img {
-  border-radius: 50%;
 }
 
 section {
@@ -227,38 +153,4 @@ textarea::placeholder {
 .btn-cancelar:hover {
   background: var(--red-button);
   color: var(--color);
-}
-
-footer {
-  display: flex;
-  padding: 24px 32px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: var(--footer-size);
-  background: var(--bg);
-  border-top: var(--border-nav);
-}
-
-.footer-block {
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-  min-width: 200px;
-  gap: 20px;
-}
-
-.footer-block > .social-media {
-  display: flex;
-  gap: 8px;
-}
-
-.footer-block > .social-media > div {
-  cursor: pointer;
-}
-
-.footer-block > ul {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 14px;
 }
