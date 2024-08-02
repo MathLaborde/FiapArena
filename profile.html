@@ -1,213 +1,228 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FIAP Arena</title>
 
     <!-- Link com o RESET -->
-    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/reset.css" />
     <!-- Link com o ESTILO DO HEADER -->
-    <link rel="stylesheet" href="./src/css/header.css">
+    <link rel="stylesheet" href="./src/css/header.css" />
     <!-- Link com o ESTILO DO CONTEÚDO  -->
-    <link rel="stylesheet" href="./src/css/profile.css">
+    <link rel="stylesheet" href="./src/css/profile.css" />
     <!-- Link com o ESTILO DO FOOTER -->
-    <link rel="stylesheet" href="./src/css/footer.css">
+    <link rel="stylesheet" href="./src/css/footer.css" />
 
     <!-- FONTES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@100..900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Link com Font Awesome -->
-    <script src="https://kit.fontawesome.com/92f82bc9ac.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/92f82bc9ac.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="./src/js/profile.js"></script>
+  </head>
 
-
-</head>
-
-<body>
-
- <!-- AQUI COMEÇA O HEADER -->
- <header>
-    <nav class="nav-bar">
+  <body>
+    <!-- AQUI COMEÇA O HEADER -->
+    <header>
+      <nav class="nav-bar">
         <div class="logo">
-            <a href="home.html"><img src="src/img/Logo.png" alt="Logo escrito Fiap Arena"></a>
+          <a href="home.html"
+            ><img src="src/img/Logo.png" alt="Logo escrito Fiap Arena"
+          /></a>
         </div>
 
         <div class="nav-list">
-            <ul>
-                <li class="nav-item"><a class="nav-link" href="./home.html">Página Inicial</a></li>
-                <li class="nav-item"><a class="nav-link" href="./createEvent.html">Criar Torneio</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Classificação</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Tournament.html">Suporte</a></li>
-            </ul>
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link" href="./home.html">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./createEvent.html">Criar Torneio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Classificação</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Tournament.html">Suporte</a>
+            </li>
+          </ul>
         </div>
-
 
         <div class="container">
-            <div class="text">
-                <a class="text-link" href="#">Title</a>
-                <a class="text-link" href="#">Descripton</a>
-            </div>
+          <div class="text">
+            <a class="text-link" href="#">Title</a>
+            <a class="text-link" href="#">Descripton</a>
+          </div>
 
-            <div>
-                <a href="./profile.html" id="perfil-icon">
-                    <img class="profile-img" src="src/img/profileImage.svg" alt="Foto de Perfil">
-                </a>
-            </div>
+          <div>
+            <a href="./profile.html" id="perfil-icon">
+              <img
+                class="profile-img"
+                src="src/img/profileImage.svg"
+                alt="Foto de Perfil"
+              />
+            </a>
+          </div>
         </div>
 
-        <div class="mobile-menu-icon">
-            <button onclick="mostrarMenu()"><img class="icon" src="./src/img/menu_white_36dp.svg" alt=""></button>
+        <div class="menu-hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
-    </nav>
-
-    <div class="mobile-menu">
-        <ul>
-            <li class="nav-item"><a class="nav-link" href="./home.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="./createEvent.html">Criar Torneio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Ranking</a></li>
-            <li class="nav-item"><a class="nav-link" href="./Tournament.html">Contact Us</a></li>
-            <a href="#"><button class="button">Perfil</button></a>
+        <ul class="menu">
+          <li><a href="home.html">Página Inicial</a></li>
+          <li><a href="createEvent.html">Criar Torneio </a></li>
+          <li><a href="ranking.html">Classificação</a></li>
+          <li><a href="#">Suporte</a></li>
         </ul>
-    </div>
-</header>
-<!-- AQUI TERMINA O HEADER -->
+      </nav>
+    </header>
+    <!-- AQUI TERMINA O HEADER -->
 
     <div class="main-content">
-        <h1>PERFIL</h1>
+      <h1>PERFIL</h1>
 
-        <div class="container-principal">
+      <div class="container-principal">
+        <img
+          src="./src/img/pexels-kellie-churchman-371878-1001676.png"
+          alt="Imagem de fundo"
+          id="background-image"
+        />
+        <button class="edit-background-button" onclick="editBackground()">
+          <i class="fa-solid fa-pencil"></i> Editar Fundo
+        </button>
 
-            <img src="./src/img/pexels-kellie-churchman-371878-1001676.png" alt="Imagem de fundo" id="background-image">
-            <button class="edit-background-button" onclick="editBackground()">
-                <i class="fa-solid fa-pencil"></i> Editar Fundo
-            </button>
-
-            <div class="content">
-                <div class="profile-column">
-
-                    <div class="profile-circle">
-                        <img src="./src/img/pexels-saulo-leite-1491182-17915314.png" alt="Foto de Perfil Cat"
-                            id="profile-picture">
-                    </div>
-
-                    <button class="edit-profile-button" onclick="editProfile()">
-                        <i class="fa-solid fa-pencil"></i> Editar foto de perfil
-                    </button>
-
-                </div>
-
-                <div class="profile-info">
-                    <div class="info-row">
-                        <div class="info-label">NOME :</div>
-                        <div class="info-field"><input type="text" id="name" placeholder="Nome"></div>
-                    </div>
-
-                    <div class="info-row">
-                        <div class="info-label">CURSO :</div>
-                        <div class="info-field"><input type="text" id="course" placeholder="Curso"></div>
-                    </div>
-                </div>
-
+        <div class="content">
+          <div class="profile-column">
+            <div class="profile-circle">
+              <img
+                src="./src/img/pexels-saulo-leite-1491182-17915314.png"
+                alt="Foto de Perfil Cat"
+                id="profile-picture"
+              />
             </div>
 
+            <button class="edit-profile-button" onclick="editProfile()">
+              <i class="fa-solid fa-pencil"></i> Editar foto de perfil
+            </button>
+          </div>
+
+          <div class="profile-info">
+            <div class="info-row">
+              <div class="info-label">NOME :</div>
+              <div class="info-field">
+                <input type="text" id="name" placeholder="Nome" />
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-label">CURSO :</div>
+              <div class="info-field">
+                <input type="text" id="course" placeholder="Curso" />
+              </div>
+            </div>
+          </div>
         </div>
-
+      </div>
     </div>
-
 
     <div class="form-container">
-        <input type="text" id="current-password" placeholder="Senha Atual" />
-        <input type="password" id="new-password" placeholder="Alterar Senha" />
-        <br>
-        <input type="email" id="email" placeholder="Email" />
-        <br>
-        <button class="cancel-button">Cancelar</button>
-        <button class="submit-button" onclick="submitForm()">Enviar</button>
+      <input type="text" id="current-password" placeholder="Senha Atual" />
+      <input type="password" id="new-password" placeholder="Alterar Senha" />
+      <br />
+      <input type="email" id="email" placeholder="Email" />
+      <br />
+      <button class="cancel-button">Cancelar</button>
+      <button class="submit-button" onclick="submitForm()">Enviar</button>
     </div>
 
-     <!-- AQUI COMECA O FOOTER -->
-     <footer>
+    <!-- AQUI COMECA O FOOTER -->
+    <footer>
+      <div class="conteudo-footer">
+        <div class="midias">
+          <a href="home.html"
+            ><img src="src/img/Logo.png" alt="Logo escrito Fiap Arena"
+          /></a>
+          <div class="icones-midia">
+            <a href="#" id="twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
 
-        <div class="conteudo-footer">
+            <a href="#" id="instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
 
-            <div class="midias">
-                <a href="home.html"><img src="src/img/Logo.png" alt="Logo escrito Fiap Arena"></a>
-                <div class="icones-midia">
-                    <a href="#" id="twitter">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
+            <a href="#" id="youtube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
 
-                    <a href="#" id="instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="#" id="youtube">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-
-                    <a href="#" id="linkedin">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-
-            <ul class="footer-list">
-                <li>
-                    <h3>Use Cases</h3>
-                </li>
-
-                <li><a href="#" class="footer-link">UI Design</a></li>
-                <li><a href="#" class="footer-link">UX Design</a></li>
-                <li><a href="#" class="footer-link">Wireframing</a></li>
-                <li><a href="#" class="footer-link">Diagramming</a></li>
-                <li><a href="#" class="footer-link">Brainstorming</a></li>
-                <li><a href="#" class="footer-link">Online Whiteboard</a></li>
-                <li><a href="#" class="footer-link">Team Collaboaton</a></li>
-            </ul>
-
-            <ul class="footer-list">
-                <li>
-                    <h3>Explore</h3>
-                </li>
-
-                <li><a href="#" class="footer-link">Design</a></li>
-                <li><a href="#" class="footer-link">Prototyping</a></li>
-                <li><a href="#" class="footer-link">Development Features</a></li>
-                <li><a href="#" class="footer-link">Design Systems</a></li>
-                <li><a href="#" class="footer-link">Collaboaton Features</a></li>
-                <li><a href="#" class="footer-link">Design Process</a></li>
-                <li><a href="#" class="footer-link">FigJam</a></li>
-            </ul>
-
-            <ul class="footer-list">
-                <li>
-                    <h3>Resources</h3>
-                </li>
-
-                <li><a href="#" class="footer-link">Blog</a></li>
-                <li><a href="#" class="footer-link">Best Practices</a></li>
-                <li><a href="#" class="footer-link">Colors</a></li>
-                <li><a href="#" class="footer-link">Color Wheel</a></li>
-                <li><a href="#" class="footer-link">Suport</a></li>
-                <li><a href="#" class="footer-link">Developers</a></li>
-                <li><a href="#" class="footer-link">Resource Library</a></li>
-            </ul>
-
+            <a href="#" id="linkedin">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
         </div>
 
+        <ul class="footer-list">
+          <li>
+            <h3>Use Cases</h3>
+          </li>
+
+          <li><a href="#" class="footer-link">UI Design</a></li>
+          <li><a href="#" class="footer-link">UX Design</a></li>
+          <li><a href="#" class="footer-link">Wireframing</a></li>
+          <li><a href="#" class="footer-link">Diagramming</a></li>
+          <li><a href="#" class="footer-link">Brainstorming</a></li>
+          <li><a href="#" class="footer-link">Online Whiteboard</a></li>
+          <li><a href="#" class="footer-link">Team Collaboaton</a></li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <h3>Explore</h3>
+          </li>
+
+          <li><a href="#" class="footer-link">Design</a></li>
+          <li><a href="#" class="footer-link">Prototyping</a></li>
+          <li><a href="#" class="footer-link">Development Features</a></li>
+          <li><a href="#" class="footer-link">Design Systems</a></li>
+          <li><a href="#" class="footer-link">Collaboaton Features</a></li>
+          <li><a href="#" class="footer-link">Design Process</a></li>
+          <li><a href="#" class="footer-link">FigJam</a></li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <h3>Resources</h3>
+          </li>
+
+          <li><a href="#" class="footer-link">Blog</a></li>
+          <li><a href="#" class="footer-link">Best Practices</a></li>
+          <li><a href="#" class="footer-link">Colors</a></li>
+          <li><a href="#" class="footer-link">Color Wheel</a></li>
+          <li><a href="#" class="footer-link">Suport</a></li>
+          <li><a href="#" class="footer-link">Developers</a></li>
+          <li><a href="#" class="footer-link">Resource Library</a></li>
+        </ul>
+      </div>
     </footer>
     <!-- AQUI TTERMINA O FOOTER -->
-
-</body>
-
+  </body>
 </html>
