@@ -6,6 +6,7 @@ table {
     color: #FFFFFF;
     margin-top: 50px;
     margin-bottom: 100px;
+    text-align: center;
 }
 
 caption {
@@ -20,8 +21,7 @@ caption {
 .titulo-tabela {
     font-family: "Bungee", sans-serif;
     font-size: 16px;
-    padding: 8px;
-    text-align: center;
+    padding: 10px;
     letter-spacing: 1px;
 }
 
@@ -29,9 +29,9 @@ td {
     font-size: 16px;
     font-weight: 600;
     padding: 8px;
-    text-align: center;
     border-bottom: 1px solid white;
     border-right: 1px solid white;
+    vertical-align: middle;
 }
 
 td:nth-child(7) {

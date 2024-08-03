@@ -1,25 +1,38 @@
-.main-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* height: 100vh; */
-}
-
 :root {
   --primary-color: #f20675;
   --secundary-color: #07F3F3;
 }
 
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.image-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.4);
+}
+
 .main-title {
-  font-size: 90px;
+  font-size: 60px;
   font-family: "Bungee", sans-serif;
-  background: linear-gradient(to bottom, var(--primary-color), var(--secundary-color));
+  background: linear-gradient(to bottom, #F20675 0%, #07F3F3 100%);
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   text-align: center;
-  margin-top: 5%;
-  /* position: absolute; */
+  position: absolute;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -42,21 +55,6 @@
   color: white;
 }
 
-
-.image-background {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.image-background img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(.4);
-}
-
 .image-background::after {
   content: "";
   position: absolute;
@@ -76,7 +74,6 @@
   position: absolute;
   cursor: pointer;
   left: 50%;
-  bottom: 20px;
   transform: translateX(-50%);
   animation-name: down-arrow;
   animation-duration: 1s;
@@ -100,51 +97,69 @@
 }
 
 .bottons {
+  width: 70%;
+  margin: 0 auto;
   display: flex;
-  gap: 50px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.bottons div {
-  padding: 10px;
-  margin: 5px;
-  border: 1px solid #000;
- background: linear-gradient(to right, 
-    rgba(0, 0, 0, 0.2) 0%, 
-    rgba(0, 0, 0, 0.2) 100%), 
-  linear-gradient(to right, var(--primary-color), var(--secundary-color));
-  filter: brightness(60%);
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
-  color: #000;
-  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  font-family: "Bungee",sans-serif;
 }
 
-.bottons .active {
-  background: linear-gradient(to right, var(--primary-color), var(--secundary-color));
-  filter: brightness(100%);
-  border-color: #3f4142; 
+.btn1, .btn3 {
+  background-color: #07F3F3;
 }
 
-.bottons div:hover {
-  background: linear-gradient(to right, var(--primary-color-hover), var(--secundary-color-hover)); 
-  transform: scale(1.05); 
+.btn2 {
+  background-color: #F20675;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(to right, #F20675, #07F3F3);
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  color: #ffffff;
+}
+
+section {
+  justify-content: center;
+  margin: 50px 0;
 }
 
 .teams-content{
+  width: 70%;
   display: flex;
-  justify-content: space-between; 
-  align-items: flex-start; 
+  justify-content: space-between;
   background-color: #6b6767;
-  z-index: 1;
-  margin: 0;
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  border-radius: 1%;
-  max-height: 100%;
+  border-radius: 10px;
 }
 
 .teams-award,
@@ -166,17 +181,13 @@
   
 }
 
-.team1 {
-  background-color: var(--bg);
-  width: 20%;
-  height: auto; 
-  display: flex;
-  margin: 5% 4%;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px; 
-  padding: 10px;
-  box-sizing: border-box;
+.titulo-team {
+  
+  margin: 10px 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
 }
 
 .team-list {
@@ -186,6 +197,10 @@
   width: 100%;
 }
 
+.team-list a {
+  color: #ffffff;
+}
+
 .team-list li {
   display: flex;
   align-items: center;
@@ -193,12 +208,18 @@
   border-bottom: 1px solid #ccc;
 }
 
+.team-list li:nth-child(5){
+  border: none;
+}
+
 .profile-pic {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 7px;
   object-fit: cover;
+  padding: 3px;
 }
 
 .profile-link {
@@ -210,39 +231,36 @@
 }
 
 .profile-link:hover {
-  background-color: #E0F7FA;
-  border-radius: 3px;
+  background-color: white;
+  color: #212226;
+  border-radius: 5px;
 }
 
 .chat-box {
-  background-color: var(--bg-input);
+  background-color: #e0e0e0;
   width: 40%;
-  height: auto; 
   display: flex;
   flex-direction: column;
   margin: 5% 4%;
   align-items: center;
   justify-content: center;
-  border-radius: 3px; 
-  padding: 10px;
-  box-sizing: border-box;
-  color: var(--color);
+  border-radius: 10px; 
+  padding: 20px;
 }
 
 .chat-header {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
 }
 
 .chat-content {
   width: 100%;
-  height: 150px;
+  height: 180px;
   background-color: #ffffff;
-  border-radius: 3px;
-  padding: 10px;
-  box-sizing: border-box;
-  overflow-y: auto;
+  border-radius: 10px;
+  padding: 20px;
   margin-bottom: 10px;
   color: black;
 }
@@ -253,6 +271,15 @@
 
 .user {
   font-weight: bold;
+}
+
+.digita {
+  margin-top: 90px;
+}
+.digitando {
+  color: #e0e0e0;
+  font-style: italic;
+  font-size: 14px;
 }
 
 .chat-input {
@@ -270,50 +297,30 @@
 
 .chat-input button {
   padding: 10px 20px;
-  border: none;
+  border: 1px solid #275EFE;
   border-radius: 3px;
-  background-color: var(--primary-color);
-  color: white;
+  background: rgba(0, 0, 0, 0);
+  color: #275EFE;
   cursor: pointer;
+  transition: all 300ms ease-in-out;
 }
 
 .chat-input button:hover {
-  background-color: var(--primary-color-hover);
+  background: #1749DB;
+  color: white;
 }
 
 
-.team2 {
-  background-color: var(--bg);
-  width: 20%;
-  height: auto; 
+.team1, .team2 {
+  background-color: #212226;
+  width: 25%;
   margin: 5% 4%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 3px; 
+  border-radius: 10px; 
   padding: 10px;
-  box-sizing: border-box;
-}
-
-.team1-title {
-  position: absolute;
-  top: 20px; 
-  left: 13%;
-  transform: translateX(-50%);
-  background-color: #6b6767;
-  padding: 5px 10px;
-  border-radius: 3px;
-  color: white;
-}
-
-.team2-title {
-  position: absolute;
-  top: 20px; /* Ajuste o valor conforme necessário */
-  left: 86%;
-  transform: translateX(-50%);
-  padding: 5px 10px;
-  border-radius: 3px;
-  color: white;
 }
 
 .teams-award {
@@ -337,42 +344,3 @@
   opacity: 1;
   visibility: visible;
 }
-
-@media(max-width:768px) {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .navbar .logo {
-      margin-bottom: 10px;
-  }
-
-  .navbar .profile {
-      margin-top: 10px;
-  }
-
-  .navbar .buttons {
-      margin-top: 10px;
-  }
-
-  .profile-container {
-      flex-direction: column;
-      padding: 20px;
-  }
-
-  .info-row {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .info-label {
-      text-align: left;
-  }
-
-  .conteudo-footer {
-      flex-direction: column;
-      text-align: center;
-  }
-}
-
