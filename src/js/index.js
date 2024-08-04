@@ -6,12 +6,14 @@ const usuarios = [
 ];
 
 window.addEventListener('load', () => {
-  const password = document.getElementById('passwordAcc');
-  const cPassword = document.getElementById('cpasswordAcc');
-  const passwordBox = document.getElementById('passwordBox');
-  const passwordBox2 = document.getElementById('passwordBox2');
-  const cMail = document.getElementById('cmailAcc');
-  const emailBox = document.getElementById('emailBox');
+  const password = escapeScriptTags(document.getElementById('passwordAcc'));
+  const cPassword = escapeScriptTags(document.getElementById('cpasswordAcc'));
+  const passwordBox = escapeScriptTags(document.getElementById('passwordBox'));
+  const passwordBox2 = escapeScriptTags(
+    document.getElementById('passwordBox2'),
+  );
+  const cMail = escapeScriptTags(document.getElementById('cmailAcc'));
+  const emailBox = escapeScriptTags(document.getElementById('emailBox'));
 
   password.addEventListener('input', (e) => {
     e.preventDefault();
@@ -40,7 +42,7 @@ window.addEventListener('load', () => {
 
   cMail.addEventListener('input', (e) => {
     e.preventDefault();
-    const email = document.getElementById('emailAcc').value;
+    const email = escapeScriptTags(document.getElementById('emailAcc').value);
     if (cMail.value !== email) {
       emailBox.innerHTML = `<ul class="error"><li style="font-size: 0.8rem" >Para garantir a segurança, o email de confirmação precisa ser igual ao email original.</li></ul>`;
     } else {
@@ -49,9 +51,9 @@ window.addEventListener('load', () => {
   });
 });
 function changedPath(path) {
-  const login = document.getElementById('login');
-  const password = document.getElementById('passwordDiv');
-  const account = document.getElementById('account');
+  const login = escapeScriptTags(document.getElementById('login'));
+  const password = escapeScriptTags(document.getElementById('passwordDiv'));
+  const account = escapeScriptTags(document.getElementById('account'));
 
   if (path === 'login') {
     login.style.display = 'block';
@@ -69,8 +71,8 @@ function changedPath(path) {
 }
 
 function fazerLogin() {
-  const password = document.getElementById('password').value;
-  const email = document.getElementById('email').value;
+  const password = escapeScriptTags(document.getElementById('password').value);
+  const email = escapeScriptTags(document.getElementById('email').value);
 
   if (email === '') {
     Swal.fire({
@@ -109,7 +111,7 @@ function fazerLogin() {
 }
 
 function enviarEmail() {
-  if (document.getElementById('emailPass').value === '') {
+  if (escapeScriptTags(document.getElementById('emailPass').value) === '') {
     Swal.fire({
       title: 'Email vazio!',
       text: 'Favor preencher campo email!',
@@ -126,12 +128,14 @@ function enviarEmail() {
 }
 
 function enviarDados() {
-  const user = document.getElementById('userAcc').value;
-  const senha = document.getElementById('passwordAcc').value;
-  const cSenha = document.getElementById('cpasswordAcc').value;
-  const email = document.getElementById('emailAcc').value;
-  const cmail = document.getElementById('cmailAcc').value;
-  const termo = document.getElementById('termoAcc').checked;
+  const user = escapeScriptTags(document.getElementById('userAcc').value);
+  const senha = escapeScriptTags(document.getElementById('passwordAcc').value);
+  const cSenha = escapeScriptTags(
+    document.getElementById('cpasswordAcc').value,
+  );
+  const email = escapeScriptTags(document.getElementById('emailAcc').value);
+  const cmail = escapeScriptTags(document.getElementById('cmailAcc').value);
+  const termo = escapeScriptTags(document.getElementById('termoAcc').checked);
 
   if (user === '') {
     Swal.fire({
@@ -238,4 +242,8 @@ function validaSenha(pass) {
   }
 
   return erros;
+}
+
+function escapeScriptTags(input) {
+  return input.replace(/>/g, '&amp;').replace(/</g, '&lt;');
 }
