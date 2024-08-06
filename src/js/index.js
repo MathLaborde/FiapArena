@@ -6,14 +6,12 @@ const usuarios = [
 ];
 
 window.addEventListener('load', () => {
-  const password = escapeScriptTags(document.getElementById('passwordAcc'));
-  const cPassword = escapeScriptTags(document.getElementById('cpasswordAcc'));
-  const passwordBox = escapeScriptTags(document.getElementById('passwordBox'));
-  const passwordBox2 = escapeScriptTags(
-    document.getElementById('passwordBox2'),
-  );
-  const cMail = escapeScriptTags(document.getElementById('cmailAcc'));
-  const emailBox = escapeScriptTags(document.getElementById('emailBox'));
+  const password = document.getElementById('passwordAcc');
+  const cPassword = document.getElementById('cpasswordAcc');
+  const passwordBox = document.getElementById('passwordBox');
+  const passwordBox2 = document.getElementById('passwordBox2');
+  const cMail = document.getElementById('cmailAcc');
+  const emailBox = document.getElementById('emailBox');
 
   password.addEventListener('input', (e) => {
     e.preventDefault();
@@ -51,9 +49,9 @@ window.addEventListener('load', () => {
   });
 });
 function changedPath(path) {
-  const login = escapeScriptTags(document.getElementById('login'));
-  const password = escapeScriptTags(document.getElementById('passwordDiv'));
-  const account = escapeScriptTags(document.getElementById('account'));
+  const login = document.getElementById('login');
+  const password = document.getElementById('passwordDiv');
+  const account = document.getElementById('account');
 
   if (path === 'login') {
     login.style.display = 'block';
@@ -135,7 +133,7 @@ function enviarDados() {
   );
   const email = escapeScriptTags(document.getElementById('emailAcc').value);
   const cmail = escapeScriptTags(document.getElementById('cmailAcc').value);
-  const termo = escapeScriptTags(document.getElementById('termoAcc').checked);
+  const termo = document.getElementById('termoAcc').checked;
 
   if (user === '') {
     Swal.fire({
