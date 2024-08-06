@@ -1,3 +1,10 @@
+const usuarios = [
+  {
+    email: 'pedro@gmail.com',
+    senha: '12345@aA',
+  },
+];
+
 document.addEventListener('DOMContentLoaded', function () {
   const nomeInput = document.getElementById('name');
   const courseInput = document.getElementById('course');
@@ -5,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const profileName = localStorage.getItem('profileName');
   const profileCourse = localStorage.getItem('profileCourse');
 
-  nomeInput.value = profileName ? profileName : 'Ana Maria ';
+  nomeInput.value = profileName ? profileName : 'Pedro Gonsalves ';
   courseInput.value = profileCourse ? profileCourse : 'Sistema da Informação ';
 
   nomeInput.addEventListener('focusout', () => {
@@ -49,6 +56,30 @@ function submitForm() {
   const currentPassword = document.getElementById('current-password').value;
   const newPassword = document.getElementById('new-password').value;
 
+  const error = validaSenha(newPassword);
+
+  if (currentPassword !== usuarios[0].senha) {
+    Swal.fire({
+      title: 'Senha Invalida.',
+      text: 'Senha não condiz com a senha atual.',
+      icon: 'error',
+      confirmButtonText: 'Okay',
+    });
+
+    return;
+  }
+
+  if (error) {
+    Swal.fire({
+      title: 'Senha inválida.',
+      text: error,
+      icon: 'error',
+      confirmButtonText: 'Okay',
+    });
+
+    return;
+  }
+
   Swal.fire({
     title: 'Alterar senha.',
     text: 'Deseja alterar a sua senha?',
@@ -57,22 +88,15 @@ function submitForm() {
     confirmButtonText: 'Sim',
     cancelButtonText: 'Não',
   }).then((e) => {
-    Swal.showLoading();
-    const interval = setInterval(() => {
+    if (e.isConfirmed) {
       Swal.fire({
         title: 'Senha alterada com sucesso.',
         text: 'Você alterou sua senha.',
         icon: 'success',
         confirmButtonText: 'Okay',
       });
-      clearInterval(interval);
-    }, 500);
+    }
   });
-}
-
-function validatePassword(password) {
-  const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{8,})/;
-  return passwordRegex.test(password);
 }
 
 function toggleMenu() {
@@ -88,4 +112,34 @@ function toggleMenu() {
 
 function escapeScriptTags(input) {
   return input.replace(/>/g, '&amp;').replace(/</g, '&lt;');
+}
+
+function validaSenha(pass) {
+  const regexMaiuscula = /[A-Z]/;
+  const regexMinuscula = /[a-z]/;
+  const regexNumero = /[0-9]/;
+  const regexEspecial = /[!@#$%^&*-+]/;
+
+  if (pass.length < 8) {
+    return 'A senha deve ter pelo menos 8 caracteres.';
+  }
+
+  if (!regexMaiuscula.test(pass)) {
+    return `A senha deve conter pelo menos uma letra maiúscula.`;
+  }
+
+  if (!regexMinuscula.test(pass)) {
+    return `A senha deve conter pelo menos uma letra minúscula.`;
+  }
+
+  if (!regexNumero.test(pass)) {
+    return `A senha deve conter pelo menos um número.`;
+  }
+
+  if (!regexEspecial.test(pass)) {
+    `A senha deve conter pelo menos um dos caracteres especial abaixo: <br> !@#$%^&*-+`;
+    return;
+  }
+
+  return null;
 }

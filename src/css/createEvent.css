@@ -9,7 +9,7 @@
   --green-button-hover: #0fa177;
   --bg-input: #e0e0e0;
 
-  --font: "Inter", sans-serif;
+  --font: 'Inter', sans-serif;
   --nav-size: 94px;
   --footer-size: 230px;
 }
@@ -92,7 +92,7 @@ a.ql-action {
 
 .ql-snow .ql-tooltip a.ql-action::after {
   border-right: 1px solid #ccc;
-  content: "Edit";
+  content: 'Edit';
   margin: 0 8px !important;
 }
 
