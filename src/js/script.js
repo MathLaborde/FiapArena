@@ -23,7 +23,7 @@ const rules = document.querySelector('.teams-rules');
 
 // Função para esconder todas as divs de conteúdo
 function hideAll() {
-  [content, award, rules].forEach((div) => {
+  [content,].forEach((div) => {
     div.classList.remove('show');
   });
 }
@@ -32,12 +32,6 @@ function hideAll() {
 function showContent(divToShow) {
   hideAll(); // Esconde todas as divs
   divToShow.classList.add('show'); // Mostra a div desejada
-}
-
-// Função para atualizar a classe ativa dos botões
-function setActiveButton(buttonToActivate) {
-  [btn1, btn2, btn3].forEach((btn) => btn.classList.remove('active'));
-  buttonToActivate.classList.add('active');
 }
 
 // Adiciona eventos de clique para cada botão

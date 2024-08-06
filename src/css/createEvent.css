@@ -32,11 +32,13 @@ section {
   align-items: center;
   gap: 16px;
   padding: 16px 280px;
+  margin: 40px;
 }
 
 .main-title {
-  font-size: 80px;
+  font-size: 50px;
   font-family: "Bungee";
+  margin-bottom: 20px;
   background: linear-gradient(
     to bottom,
     var(--primary-color),

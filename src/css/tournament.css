@@ -26,7 +26,7 @@
 }
 
 .main-title {
-  font-size: 60px;
+  font-size: 50px;
   font-family: "Bungee", sans-serif;
   background: linear-gradient(to bottom, #F20675 0%, #07F3F3 100%);
   background-clip: text;
@@ -162,13 +162,14 @@ section {
   border-radius: 10px;
 }
 
-.teams-award,
+.teams-award {
+  display: none;
+}
+
 .teams-rules {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
+  display: none;
+  width: 90%;
+  bottom: 100; 
   border-radius: 1%;
   padding: 70px 30px 30px 30px;
   margin: 0;
@@ -178,11 +179,9 @@ section {
   background-color: #6b6767;
   z-index: 1;
   position: relative;
-  
 }
 
 .titulo-team {
-  
   margin: 10px 0;
   font-family: "Inter", sans-serif;
   font-size: 16px;
