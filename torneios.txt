@@ -1,0 +1,99 @@
+1. CTF de Segurança da Informação
+Título: CyberConquest - Capture the Flag
+
+Descrição:
+CyberConquest é uma competição de segurança cibernética onde equipes competem para resolver desafios de hacking, criptografia e análise forense digital. Teste suas habilidades e descubra vulnerabilidades enquanto luta para capturar a bandeira e se tornar o campeão da segurança cibernética.
+
+Regras:
+
+Participação: Equipes de 2 a 4 pessoas.
+Desafios: Vários desafios divididos em categorias como Web Exploits, Criptografia, Forense, Engenharia Reversa e Exploração Binária.
+Pontos: Cada desafio possui uma pontuação específica, dependendo da dificuldade. Equipes somam pontos ao capturar as bandeiras.
+Tempo: A competição durará 8 horas. A equipe com mais pontos ao final vence.
+Conduta: Não é permitido realizar ataques aos servidores de outros competidores ou à infraestrutura da competição. Qualquer tentativa de sabotagem resultará em desclassificação.
+Premiação:
+
+1º Lugar: Troféu + Certificados + Vouchers para cursos de segurança da informação.
+2º Lugar: Certificados + Vouchers para cursos online.
+3º Lugar: Certificados + Kits de brindes tecnológicos.
+
+
+2. League of Legends
+Título: Summoner’s Clash - Torneio de League of Legends
+
+Descrição:
+Entre na arena do Summoner’s Rift e mostre suas habilidades estratégicas em um torneio de League of Legends. Reúna sua equipe e enfrente outros invocadores para determinar quem é o verdadeiro mestre do Rift.
+
+Regras:
+
+Participação: Times de 5 jogadores.
+Formato: Eliminatória simples, Melhor de 3 (Bo3) nas semifinais e Melhor de 5 (Bo5) na final.
+Mapas: Apenas Summoner’s Rift (modo 5v5).
+Picks e Bans: Seguir o formato oficial de Pick e Ban do LoL.
+Conduta: Proibido o uso de qualquer software de trapaça ou bugs exploráveis. Conduta antidesportiva será punida com desclassificação.
+Premiação:
+
+1º Lugar: Troféu + Skins Lendárias para cada jogador + Créditos na Riot Store.
+2º Lugar: Créditos na Riot Store + Skins Épicas.
+3º Lugar: Skins Épicas.
+
+
+3. Among Us
+Título: Imposter Hunt - Torneio de Among Us
+
+Descrição:
+Em Imposter Hunt, a confiança é a chave. Enfrente outros jogadores em partidas emocionantes de Among Us onde a dedução e a estratégia são tudo. Quem será o melhor detetive ou o impostor mais habilidoso?
+
+Regras:
+
+Participação: Partidas de 10 jogadores por vez.
+Formato: Rodadas eliminatórias, onde os jogadores com melhor desempenho (sobrevivência, número de impostores descobertos, etc.) avançam.
+Impostores: 2 impostores por partida.
+Comunicação: Durante as discussões, apenas o chat do jogo pode ser usado. Comunicação fora do jogo é proibida.
+Conduta: Proibido o uso de hacks ou qualquer forma de trapaça. Respeitar os outros jogadores é essencial.
+Premiação:
+
+1º Lugar: Troféu + Gift Card em loja de jogos + Pelúcias ou itens temáticos de Among Us.
+2º Lugar: Gift Card + Pelúcia de Among Us.
+3º Lugar: Gift Card.
+
+
+4. Mortal Kombat 11
+Título: Fatal Showdown - Torneio de Mortal Kombat 11
+
+Descrição:
+Prepare-se para o combate supremo em Fatal Showdown, onde os melhores lutadores se enfrentam em batalhas intensas de Mortal Kombat 11. Apenas os mais habilidosos sobreviverão e conquistarão a vitória!
+
+Regras:
+
+Participação: Individual.
+Formato: Eliminatória simples com rodadas de Melhor de 3 (Bo3). A final será Melhor de 5 (Bo5).
+Personagens: Todos os personagens disponíveis podem ser utilizados.
+Conduta: Proibido o uso de glitches ou exploits. Respeitar os adversários é fundamental.
+Configurações: Configurações padrão do torneio, sem customizações de personagem.
+Premiação:
+
+1º Lugar: Troféu + Edição especial de MK11 + Controle de console personalizado.
+2º Lugar: Edição especial de MK11 + Merchandising oficial.
+3º Lugar: Merchandising oficial.
+
+
+5. Counter-Strike: Global Offensive (CS)
+Título: StrikeZone - Torneio de CS
+
+Descrição:
+StrikeZone é o campo de batalha onde as melhores equipes de CS
+se enfrentam. Com precisão, estratégia e trabalho em equipe, só os mais preparados sairão vitoriosos. Prepare-se para a guerra.
+
+Regras:
+
+Participação: Times de 5 jogadores.
+Formato: Eliminatória simples, Melhor de 1 (Bo1) até as semifinais, que serão Melhor de 3 (Bo3). A final será Melhor de 5 (Bo5).
+Mapas: Mirage, Inferno, Dust2, Overpass, Nuke (sorteio de mapas conforme regras oficiais).
+Configurações: Configurações padrão de torneio. Sem uso de scripts ou cheats.
+Conduta: Qualquer comportamento antidesportivo resultará em punição. Respeito e fair play são essenciais.
+Premiação:
+
+1º Lugar: Troféu + Skins exclusivas + Créditos na Steam.
+2º Lugar: Skins + Créditos na Steam.
+3º Lugar: Skins de valor menor.

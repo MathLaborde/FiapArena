@@ -1,0 +1,345 @@
+:root {
+  --primary-color: #f20675;
+  --secundary-color: #07F3F3;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.image-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.4);
+}
+
+.main-title {
+  font-size: 50px;
+  font-family: "Bungee", sans-serif;
+  background: linear-gradient(to bottom, #F20675 0%, #07F3F3 100%);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.main-description {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  color: white;
+  text-align: center;
+  position: absolute;
+  margin-top: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+.text-overlay{
+  color: white;
+}
+
+.image-background::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #212226, rgba(33, 34, 38, 0) 10%, rgba(33, 34, 38, 1));
+}
+
+
+.down-arrow {
+  width: 150px;
+  height: 150px;
+  background-image: url(../img/down-arrow.png);
+  background-size: contain;
+  position: absolute;
+  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: down-arrow;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: filter 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.down-arrow:hover {
+  filter: invert(1); /* Inverte as cores da imagem ao passar o mouse */
+}
+
+@keyframes down-arrow {
+  0% {
+    top: 500px;
+  }
+  100% {
+    top: 510px;
+  }
+}
+
+.bottons {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  font-family: "Bungee",sans-serif;
+}
+
+.btn1, .btn3 {
+  background-color: #07F3F3;
+}
+
+.btn2 {
+  background-color: #F20675;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(to right, #F20675, #07F3F3);
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  color: #ffffff;
+}
+
+section {
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.teams-content{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #6b6767;
+  border-radius: 10px;
+}
+
+.teams-award {
+  display: none;
+}
+
+.teams-rules {
+  display: none;
+  width: 90%;
+  bottom: 100; 
+  border-radius: 1%;
+  padding: 70px 30px 30px 30px;
+  margin: 0;
+}
+
+.teams-content {
+  background-color: #6b6767;
+  z-index: 1;
+  position: relative;
+}
+
+.titulo-team {
+  margin: 10px 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.team-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.team-list a {
+  color: #ffffff;
+}
+
+.team-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.team-list li:nth-child(5){
+  border: none;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 7px;
+  object-fit: cover;
+  padding: 3px;
+}
+
+.profile-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-link:hover {
+  background-color: white;
+  color: #212226;
+  border-radius: 5px;
+}
+
+.chat-box {
+  background-color: #e0e0e0;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin: 5% 4%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; 
+  padding: 20px;
+}
+
+.chat-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+
+.chat-content {
+  width: 100%;
+  height: 180px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.user {
+  font-weight: bold;
+}
+
+.digita {
+  margin-top: 90px;
+}
+.digitando {
+  color: #e0e0e0;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.chat-input {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  border: 1px solid #275EFE;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0);
+  color: #275EFE;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.chat-input button:hover {
+  background: #1749DB;
+  color: white;
+}
+
+
+.team1, .team2 {
+  background-color: #212226;
+  width: 25%;
+  margin: 5% 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; 
+  padding: 10px;
+}
+
+.teams-award {
+  background-color: #35363A;
+  z-index: 2; /* Define a camada intermediária */
+}
+
+.teams-rules {
+  background-color: #2f3138;
+  z-index: 3; /* Define a camada superior */
+}
+
+
+.teams-content, .teams-award, .teams-rules {
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  visibility: hidden;
+}
+
+.teams-content.show, .teams-award.show, .teams-rules.show {
+  opacity: 1;
+  visibility: visible;
+}

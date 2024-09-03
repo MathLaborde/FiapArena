@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiap Arena</title>
+    <link rel="icon" href="./src/img/MiniLogo.png" />
+
+    <!-- Link com o RESET -->
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <!-- Link com o ESTILO DO HEADER -->
+    <link rel="stylesheet" href="./src/css/header.css" />
+    <!-- Link com o ESTILO DO CONTEÚDO  -->
+    <link rel="stylesheet" href="./src/css/tournament.css" />
+    <!-- Link com o ESTILO DO FOOTER -->
+    <link rel="stylesheet" href="./src/css/footer.css" />
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/92f82bc9ac.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- AQUI COMEÇA O HEADER -->
+    <header>
+      <nav class="nav-bar">
+        <div class="logo">
+          <a href="home.html"
+            ><img src="src/img/Logo.png" alt="Logo escrito Fiap Arena"
+          /></a>
+        </div>
+
+        <div class="nav-list">
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link" href="./home.html">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./createEvent.html">Criar Torneio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./ranking.html">Classificação</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Suporte</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="container">
+          <div class="text">
+            <a class="text-link" href="#">Pedro Gonçaves</a>
+            <a class="text-link" href="#">pedro@gmail.com</a>
+          </div>
+
+          <div>
+            <a href="./profile.html" id="perfil-icon">
+              <img
+                class="profile-img"
+                src="src/img/profileImage.svg"
+                alt="Foto de Perfil"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="menu-hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="menu">
+          <li><a class="active" href="home.html">Página Inicial</a></li>
+          <li><a href="createEvent.html">Criar Torneio </a></li>
+          <li><a href="ranking.html">Classificação</a></li>
+          <li><a href="#">Suporte</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- AQUI TERMINA O HEADER -->
+
+    <div class="main-content">
+      <div class="image-background">
+        <img src="./src/img/fundo.jpg" alt="plano de fundo" />
+      </div>
+      <div class="text-overlay">
+        <h1 class="main-title">Gamer's Gauntlet</h1>
+        <h2 class="main-description">
+          Esse torneio é voltado para estudantes da FIAP de níveis Prata e Ouro.
+          Os participantes terão a chance de mostrar suas habilidades e competir
+          por um prêmio exclusivo: um passe de skins raras. Junte-se a nós para
+          esta batalha épica e prove que você é o melhor campeão da FIAP!
+        </h2>
+      </div>
+    </div>
+
+    <div class="down-arrow"></div>
+
+    <div class="bottons">
+      <div id="show-or-hide" class="btn btn1">Ver regras</div>
+      <div id="show-or-hide" class="btn btn2">Ver Participantes</div>
+      <div id="show-or-hide" class="btn btn3">Ver premiação</div>
+    </div>
+
+    <section class="container">
+      <div class="teams-content">
+        <div class="team1">
+          <h2 class="titulo-team">Time 1</h2>
+          <ul class="team-list">
+            <li>
+              <a href="#" class="profile-link">
+                <img
+                  src="./src/img/profile.jpg"
+                  alt="Joao"
+                  class="profile-pic"
+                />
+                João
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile-link">
+                <img
+                  src="./src/img/profile.jpg"
+                  alt="Maria"
+                  class="profile-pic"
+                />
+                Maria
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile-link">
+                <img
+                  src="./src/img/profile.jpg"
+                  alt="Gabriel"
+                  class="profile-pic"
+                />
+                Gabriel
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile-link">
+                <img
+                  src="./src/img/profile.jpg"
+                  alt="Joquina"
+                  class="profile-pic"
+                />
+                Joquina
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile-link">
+                <img
+                  src="./src/img/profile.jpg"
+                  alt="Fernanda"
+                  class="profile-pic"
+                />
+                Fernanda
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="chat-box">
+          <div class="chat-header">Chat</div>
+          <div class="chat-content">
+            <div class="message"><span class="user">João:</span> Olá!</div>
+            <div class="message">
+              <span class="user">Maria:</span> Tudo bem?
+            </div>
+            <div class="digita">
+              <span class="user digitando">João está digitando..</span>
+            </div>
+          </div>
+          <div class="chat-input">
+            <input type="text" id="chat" placeholder="Digite sua mensagem..." />
+            <button id="enviar-chat">Enviar</button>
+          </div>
+        </div>
+
+        <div class="team2">
+          <h2 class="titulo-team">Time 2</h2>
+          <ul class="team-list">
+            <li>
+              <a href="#" class="profile-link">
+                <img
+                  src="./src/img/profile.jpg"
+                  alt="Joao"
+                  class="profile-pic"
+                />
+                Pato Donald
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile-link">
+                <img
+                  src="./src/img/profile.jpg"
+                  alt="Maria"
+                  class="profile-pic"
+                />
+                Mickey
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile-link">
+                <img
+                  src="./src/img/profile.jpg"
+                  alt="Gabriel"
+                  class="profile-pic"
+                />
+                Thor
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile-link">
+                <img
+                  src="./src/img/profile.jpg"
+                  alt="Joquina"
+                  class="profile-pic"
+                />
+                Wolverine
+              </a>
+            </li>
+            <li>
+              <a href="#" class="profile-link">
+                <img
+                  src="./src/img/profile.jpg"
+                  alt="Fernanda"
+                  class="profile-pic"
+                />
+                Spiderman
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="teams-award">
+        O prêmio será um novo pacote de Skins para a personagem Soraka
+      </div>
+
+      <div class="teams-rules">
+        Proibição de Magia: Personagens mágicos não são permitidos durante a
+        partida.
+      </div>
+    </section>
+    <!-- <div id="editor"></div> -->
+
+    <!-- AQUI COMECA O FOOTER -->
+    <footer>
+      <div class="conteudo-footer">
+        <div class="midias">
+          <a href="home.html"
+            ><img src="src/img/Logo.png" alt="Logo escrito Fiap Arena"
+          /></a>
+          <div class="icones-midia">
+            <a href="#" id="twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="#" id="instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" id="youtube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" id="linkedin">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <h3>Use Cases</h3>
+          </li>
+
+          <li><a href="#" class="footer-link">UI Design</a></li>
+          <li><a href="#" class="footer-link">UX Design</a></li>
+          <li><a href="#" class="footer-link">Wireframing</a></li>
+          <li><a href="#" class="footer-link">Diagramming</a></li>
+          <li><a href="#" class="footer-link">Brainstorming</a></li>
+          <li><a href="#" class="footer-link">Online Whiteboard</a></li>
+          <li><a href="#" class="footer-link">Team Collaboaton</a></li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <h3>Explore</h3>
+          </li>
+
+          <li><a href="#" class="footer-link">Design</a></li>
+          <li><a href="#" class="footer-link">Prototyping</a></li>
+          <li><a href="#" class="footer-link">Development Features</a></li>
+          <li><a href="#" class="footer-link">Design Systems</a></li>
+          <li><a href="#" class="footer-link">Collaboaton Features</a></li>
+          <li><a href="#" class="footer-link">Design Process</a></li>
+          <li><a href="#" class="footer-link">FigJam</a></li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <h3>Resources</h3>
+          </li>
+
+          <li><a href="#" class="footer-link">Blog</a></li>
+          <li><a href="#" class="footer-link">Best Practices</a></li>
+          <li><a href="#" class="footer-link">Colors</a></li>
+          <li><a href="#" class="footer-link">Color Wheel</a></li>
+          <li><a href="#" class="footer-link">Suport</a></li>
+          <li><a href="#" class="footer-link">Developers</a></li>
+          <li><a href="#" class="footer-link">Resource Library</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- AQUI TTERMINA O FOOTER -->
+
+    <script src="./src/js/tournament.js"></script>
+  </body>
+</html>
