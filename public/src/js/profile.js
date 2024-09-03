@@ -1,10 +1,3 @@
-const usuarios = [
-  {
-    email: 'pedro@gmail.com',
-    senha: '12345@aA',
-  },
-];
-
 document.addEventListener('DOMContentLoaded', function () {
   const nomeInput = document.getElementById('name');
   const courseInput = document.getElementById('course');

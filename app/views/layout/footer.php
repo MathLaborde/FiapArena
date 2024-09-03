@@ -1,7 +1,7 @@
 <footer>
   <div class="conteudo-footer">
     <div class="midias">
-      <a href="home.html"><img src="/public/src/img/Logo.png" alt="Logo escrito Fiap Arena" /></a>
+      <a href="/home"><img src="/public/src/img/Logo.png" alt="Logo escrito Fiap Arena" /></a>
       <div class="icones-midia">
         <a href="#" id="twitter">
           <i class="fa-brands fa-x-twitter"></i>

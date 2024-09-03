@@ -67,7 +67,7 @@ form.addEventListener('submit', (e) => {
 
   const shortImg = shortFile?.length > 0 ? shortFile[0] : null;
 
-  const maxSize = 10 * 1024 * 1024;
+  const maxSize = 20 * 1024 * 1024;
 
   // #region Validation
   if (name.length <= 0) {

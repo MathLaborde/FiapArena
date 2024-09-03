@@ -1,238 +1,64 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FIAP Arena</title>
-    <link rel="icon" href="./src/img/MiniLogo.png" />
+<link rel="stylesheet" href="/public/src/css/profile.css" />
+<div class="main-content">
+  <div class="container-principal">
+    <img
+      src="/public/src/img/banner.jpg"
+      alt="Imagem de fundo"
+      id="background-image" />
+    <button class="edit-background-button" onclick="editBackground()">
+      <i class="fa-solid fa-pencil"></i> Editar Fundo
+    </button>
 
-    <!-- Link com o RESET -->
-    <link rel="stylesheet" href="./src/css/reset.css" />
-    <!-- Link com o ESTILO DO HEADER -->
-    <link rel="stylesheet" href="./src/css/header.css" />
-    <!-- Link com o ESTILO DO CONTEÚDO  -->
-    <link rel="stylesheet" href="./src/css/profile.css" />
-    <!-- Link com o ESTILO DO FOOTER -->
-    <link rel="stylesheet" href="./src/css/footer.css" />
-
-    <!-- FONTES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Link com Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/92f82bc9ac.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-
-  <body>
-    <!-- AQUI COMEÇA O HEADER -->
-    <header>
-      <nav class="nav-bar">
-        <div class="logo">
-          <a href="home.html"
-            ><img src="src/img/Logo.png" alt="Logo escrito Fiap Arena"
-          /></a>
+    <div class="content">
+      <div class="profile-column">
+        <div class="profile-circle">
+          <img
+            src="/public/src/img/profile.jpg"
+            alt="Foto de Perfil Cat"
+            id="profile-picture" />
         </div>
 
-        <div class="nav-list">
-          <ul>
-            <li class="nav-item">
-              <a class="nav-link" href="./home.html">Página Inicial</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./createEvent.html">Criar Torneio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./ranking.html">Classificação</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Suporte</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="container">
-          <div class="text">
-            <a class="text-link" href="#">Pedro Gonçaves</a>
-            <a class="text-link" href="#">pedro@gmail.com</a>
-          </div>
-
-          <div>
-            <a href="./profile.html" id="perfil-icon">
-              <img
-                class="profile-img"
-                src="src/img/profileImage.svg"
-                alt="Foto de Perfil"
-              />
-            </a>
-          </div>
-        </div>
-
-        <div class="menu-hamburger" onclick="toggleMenu()">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <ul class="menu">
-          <li><a href="home.html">Página Inicial</a></li>
-          <li><a href="createEvent.html">Criar Torneio </a></li>
-          <li><a href="ranking.html">Classificação</a></li>
-          <li><a href="#">Suporte</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- AQUI TERMINA O HEADER -->
-
-    <div class="main-content">
-      <h1>PERFIL</h1>
-
-      <div class="container-principal">
-        <img
-          src="./src/img/pexels-kellie-churchman-371878-1001676.png"
-          alt="Imagem de fundo"
-          id="background-image"
-        />
-        <button class="edit-background-button" onclick="editBackground()">
-          <i class="fa-solid fa-pencil"></i> Editar Fundo
+        <button class="edit-profile-button" onclick="editProfile()">
+          <i class="fa-solid fa-pencil"></i> Editar foto de perfil
         </button>
+      </div>
 
-        <div class="content">
-          <div class="profile-column">
-            <div class="profile-circle">
-              <img
-                src="./src/img/pexels-saulo-leite-1491182-17915314.png"
-                alt="Foto de Perfil Cat"
-                id="profile-picture"
-              />
-            </div>
+      <div class="profile-info">
+        <div class="info-row">
+          <div class="info-label">NOME :</div>
+          <input
+            class="info-field"
+            type="text"
+            id="name"
+            placeholder="Nome" />
+        </div>
 
-            <button class="edit-profile-button" onclick="editProfile()">
-              <i class="fa-solid fa-pencil"></i> Editar foto de perfil
-            </button>
-          </div>
-
-          <div class="profile-info">
-            <div class="info-row">
-              <div class="info-label">NOME :</div>
-              <input
-                class="info-field"
-                type="text"
-                id="name"
-                placeholder="Nome"
-              />
-            </div>
-
-            <div class="info-row">
-              <div class="info-label">CURSO :</div>
-              <input
-                class="info-field"
-                type="text"
-                id="course"
-                placeholder="Curso"
-              />
-            </div>
-          </div>
+        <div class="info-row">
+          <div class="info-label">CURSO :</div>
+          <input
+            class="info-field"
+            type="text"
+            id="course"
+            placeholder="Curso" />
         </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <div class="form-container">
-      <h1 class="title-password">Mudar senha:</h1>
+<div class="form-container">
+  <h1 class="title-password">Mudar senha:</h1>
 
-      <input type="password" id="current-password" placeholder="Senha Atual" />
-      <input type="password" id="new-password" placeholder="Alterar Senha" />
-      <br />
-      <!-- <input type="email" id="email" placeholder="Email" /> -->
-      <br />
-      <button class="cancel-button">Cancelar</button>
-      <button class="submit-button" onclick="submitForm()">Enviar</button>
-    </div>
+  <input type="password" id="current-password" placeholder="Senha Atual" />
+  <input type="password" id="new-password" placeholder="Alterar Senha" />
+  <br />
+  <!-- <input type="email" id="email" placeholder="Email" /> -->
+  <br />
+  <button class="cancel-button">Cancelar</button>
+  <button class="submit-button" onclick="submitForm()">Enviar</button>
+</div>
 
-    <!-- AQUI COMECA O FOOTER -->
-    <footer>
-      <div class="conteudo-footer">
-        <div class="midias">
-          <a href="home.html"
-            ><img src="src/img/Logo.png" alt="Logo escrito Fiap Arena"
-          /></a>
-          <div class="icones-midia">
-            <a href="#" id="twitter">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
+<script src="/public/src/js/profile.js"></script>
+</body>
 
-            <a href="#" id="instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a href="#" id="youtube">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-
-            <a href="#" id="linkedin">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-
-        <ul class="footer-list">
-          <li>
-            <h3>Use Cases</h3>
-          </li>
-
-          <li><a href="#" class="footer-link">UI Design</a></li>
-          <li><a href="#" class="footer-link">UX Design</a></li>
-          <li><a href="#" class="footer-link">Wireframing</a></li>
-          <li><a href="#" class="footer-link">Diagramming</a></li>
-          <li><a href="#" class="footer-link">Brainstorming</a></li>
-          <li><a href="#" class="footer-link">Online Whiteboard</a></li>
-          <li><a href="#" class="footer-link">Team Collaboaton</a></li>
-        </ul>
-
-        <ul class="footer-list">
-          <li>
-            <h3>Explore</h3>
-          </li>
-
-          <li><a href="#" class="footer-link">Design</a></li>
-          <li><a href="#" class="footer-link">Prototyping</a></li>
-          <li><a href="#" class="footer-link">Development Features</a></li>
-          <li><a href="#" class="footer-link">Design Systems</a></li>
-          <li><a href="#" class="footer-link">Collaboaton Features</a></li>
-          <li><a href="#" class="footer-link">Design Process</a></li>
-          <li><a href="#" class="footer-link">FigJam</a></li>
-        </ul>
-
-        <ul class="footer-list">
-          <li>
-            <h3>Resources</h3>
-          </li>
-
-          <li><a href="#" class="footer-link">Blog</a></li>
-          <li><a href="#" class="footer-link">Best Practices</a></li>
-          <li><a href="#" class="footer-link">Colors</a></li>
-          <li><a href="#" class="footer-link">Color Wheel</a></li>
-          <li><a href="#" class="footer-link">Suport</a></li>
-          <li><a href="#" class="footer-link">Developers</a></li>
-          <li><a href="#" class="footer-link">Resource Library</a></li>
-        </ul>
-      </div>
-    </footer>
-    <!-- AQUI TTERMINA O FOOTER -->
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./src/js/profile.js"></script>
-  </body>
 </html>

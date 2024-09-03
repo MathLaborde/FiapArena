@@ -96,7 +96,7 @@ function fazerLogin() {
         text: 'Acesso Liberado!',
         icon: 'success',
       }).then((e) => {
-        window.location.href = 'home.html';
+        window.location.href = '/home';
       });
     } else {
       Swal.fire({
@@ -205,7 +205,7 @@ function enviarDados() {
     text: 'Usuario criado com sucesso!',
     icon: 'success',
   }).then((e) => {
-    window.location.href = 'home.html';
+    window.location.href = '/home';
   });
 }
 

@@ -17,7 +17,6 @@
             data-id="<?php echo htmlspecialchars($tournament['id']); ?>"
             data-large-text="<?php echo htmlspecialchars($tournament['name']); ?>"
             data-text="<?php echo htmlspecialchars($tournament['description']); ?>" />
-
         <?php } ?>
 
       </div>
@@ -35,7 +34,7 @@
               Duas equipes com 5 jogadores; controle do jogador, defesa do mapa e
               destruição do território inimigo
             </div>
-            <a href="Tournament.html" class="explore-button">
+            <a href="/tournament?id=<?php echo htmlspecialchars($tournament['id']); ?>" class="explore-button">
               <i class="fa-solid"></i>Explore</a>
           </div>
         </div>
