@@ -30,6 +30,7 @@
           <input
             class="info-field"
             value="<?php echo $_SESSION['name'] ?>"
+            data-value="<?php echo $_SESSION['name'] ?>"
             type="text"
             id="name"
             placeholder="Nome" />
@@ -40,9 +41,15 @@
           <input
             class="info-field"
             value="<?php echo isset($user['curso']) ? $user['curso'] : '' ?>"
+            data-value="<?php echo isset($user['curso']) ? $user['curso'] : '' ?>"
             type="text"
             id="course"
             placeholder="Curso" />
+        </div>
+
+        <div class="info-buttons">
+          <button class="cancelar" onclick="cancelar()">Cancelar</button>
+          <button class="salvar" onclick="salvar()">Salvar</button>
         </div>
       </div>
     </div>
@@ -54,11 +61,7 @@
 
   <input type="password" id="current-password" placeholder="Senha Atual" />
   <input type="password" id="new-password" placeholder="Alterar Senha" />
-  <br />
-  <!-- <input type="email" id="email" placeholder="Email" /> -->
-  <br />
-  <button class="cancel-button">Cancelar</button>
-  <button class="submit-button" onclick="submitForm()">Enviar</button>
+  <button class="submit-button" onclick="cahngePassword()">Enviar</button>
 </div>
 
 <script src="/public/src/js/profile.js"></script>

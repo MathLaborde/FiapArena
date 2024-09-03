@@ -208,6 +208,46 @@ body {
   width: 100%;
 }
 
+.info-buttons {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 12px;
+  width: 100%;
+  gap: 8px;
+}
+
+.info-buttons > button {
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.info-buttons > .cancelar {
+  background: transparent;
+  border: 1px solid red;
+  color: red;
+}
+
+.info-buttons > .salvar {
+  background: green;
+  border: 1px solid darkgreen;
+  color: white;
+}
+.info-buttons > .cancelar:hover {
+  background: red;
+  border: 1px solid red;
+  color: white;
+}
+
+.info-buttons > .salvar:hover {
+  background: darkgreen;
+  border: 1px solid darkgreen;
+  color: white;
+}
+
 .info-label {
   flex: 1;
   font-size: 18px;

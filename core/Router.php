@@ -109,6 +109,20 @@ route('profile/banner/edit', function () {
   $controller->changeBanner();
 });
 
+route('profile/edit', function () {
+  require_once __DIR__ . '/../app/controllers/ProfileController.php';
+  $controller = new ProfileController();
+
+  $controller->edit();
+});
+
+route('profile/password', function () {
+  require_once __DIR__ . '/../app/controllers/ProfileController.php';
+  $controller = new ProfileController();
+
+  $controller->password();
+});
+
 route('logout', function () {
   session_destroy();
   header('Location: /');

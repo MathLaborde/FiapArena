@@ -58,4 +58,53 @@ class User
 
     return false;
   }
+
+  public function edit($name, $curso)
+  {
+    $sql = "UPDATE users SET name=:name, curso=:curso WHERE id = :id";
+
+    $stmt = $this->conn->prepare($sql);
+
+    $stmt->bindParam(':name', $name);
+    $stmt->bindParam(':curso', $curso);
+    $stmt->bindParam(':id', $_SESSION['id']);
+
+    // Executa a query
+    if ($stmt->execute()) {
+      $_SESSION['name'] = $name;
+
+      return true;
+    }
+
+    return false;
+  }
+
+  public function password($currentPassword, $newPassword)
+  {
+    $sql = "SELECT password FROM users WHERE id = :id";
+
+    $stmt = $this->conn->prepare($sql);
+
+    $stmt->bindParam(':id', $_SESSION['id']);
+    $stmt->execute();
+
+    $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if (password_verify($currentPassword, $data['password'])) {
+
+      $sql = "UPDATE users SET password = :password WHERE id = :id";
+
+      $stmt = $this->conn->prepare($sql);
+
+      $hash = password_hash($newPassword, PASSWORD_BCRYPT);
+
+      $stmt->bindParam(':password', $hash);
+      $stmt->bindParam(':id', $_SESSION['id']);
+      $stmt->execute();
+
+      return true;
+    }
+
+    return false;
+  }
 }
