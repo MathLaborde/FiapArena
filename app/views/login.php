@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página de Login</title>
-    <link rel="icon" href="./src/img/MiniLogo.png" />
+    <link rel="icon" href="/public/src/img/MiniLogo.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="src/css/reset.css" />
-    <link rel="stylesheet" href="src/css/login.css" />
+    <link rel="stylesheet" href="/public/src/css/reset.css" />
+    <link rel="stylesheet" href="/public/src/css/login.css" />
 
     <!-- JS & SweetAlert2 -->
-    <script src="./src/js/index.js"></script>
+    <script src="/public/src/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link
@@ -41,7 +41,7 @@
   <body id="body">
     <div id="container">
       <div class="banner">
-        <img src="src/img/login.svg" alt="imagem-login" />
+        <img src="/public/src/img/login.svg" alt="imagem-login" />
         <h2>
           Saudações!
           <br />Conecte-se para ter acesso completo.
@@ -53,21 +53,16 @@
 
         <div class="box">
           <h2>Faça o seu login agora</h2>
-          <input type="email" name="email" id="email" placeholder="email" />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="password"
-          />
+
+          <form action="/login" method="post">
+            <input type="email" name="email" id="email" placeholder="email" />
+            <input type="password" name="password" id="password" placeholder="password" />
+            <input type="submit" value="Entrar" />
+          </form>
 
           <a href="#password" onclick="changedPath('password')">
             <p>Esqueceu a sua senha?</p>
           </a>
-
-          <button onclick="fazerLogin()" class="" id="login" type="button">
-            <strong>Login</strong>
-          </button>
 
           <a href="#account" onclick="changedPath('account')">
             <p>Criar uma conta</p>
@@ -82,53 +77,54 @@
 
         <div class="box-account">
           <h2>Informe os seus dados</h2>
-          <input
-            type="text"
-            name="userAcc"
-            id="userAcc"
-            placeholder="usuario"
-          />
-          <input
-            type="email"
-            name="emailAcc"
-            id="emailAcc"
-            placeholder="e-mail"
-          />
-          <input
-            type="email"
-            name="cmailAcc"
-            id="cmailAcc"
-            placeholder="confirmar o e-mail"
-          />
-          <div id="emailBox"></div>
-          <input
-            type="password"
-            name="passwordAcc"
-            id="passwordAcc"
-            placeholder="senha"
-          />
-          <div id="passwordBox"></div>
-          <input
-            type="password"
-            name="cpasswordAcc"
-            id="cpasswordAcc"
-            placeholder="confirmar a senha"
-          />
-          <div id="passwordBox2"></div>
-
-          <div class="check">
+          <form action="/login/store" method="post">
             <input
-              type="checkbox"
-              name="termoAcc"
-              id="termoAcc"
-              style="width: 13px; height: 13px"
+              type="text"
+              name="userAcc"
+              id="userAcc"
+              placeholder="usuario"
             />
-            <label for="termos" style="color: #3d3d3d"
-              >li e aceito os <a href="#">termos</a></label
-            >
-          </div>
+            <input
+              type="email"
+              name="emailAcc"
+              id="emailAcc"
+              placeholder="e-mail"
+            />
+            <input
+              type="email"
+              name="cmailAcc"
+              id="cmailAcc"
+              placeholder="confirmar o e-mail"
+            />
+            <div id="emailBox"></div>
+            <input
+              type="password"
+              name="passwordAcc"
+              id="passwordAcc"
+              placeholder="senha"
+            />
+            <div id="passwordBox"></div>
+            <input
+              type="password"
+              name="cpasswordAcc"
+              id="cpasswordAcc"
+              placeholder="confirmar a senha"
+            />
+            <div id="passwordBox2"></div>
 
-          <button onclick="enviarDados()">Criar conta</button>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="termoAcc"
+                id="termoAcc"
+                style="width: 13px; height: 13px"
+              />
+              <label for="termos" style="color: #3d3d3d"
+                >li e aceito os <a href="#">termos</a></label
+              >
+            </div>
+            <button type="submit" onclick="enviarDados()">Criar conta</button>
+          </form>
         </div>
       </div>
 

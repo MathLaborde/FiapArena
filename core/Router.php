@@ -28,6 +28,20 @@ route('', function () {
   $controller->index();
 });
 
+route('login/store', function () {
+  require_once __DIR__ . '/../app/controllers/LoginController.php';
+  $controller = new LoginController();
+
+  $controller->store();
+});
+
+route('login', function () {
+  require_once __DIR__ . '/../app/controllers/LoginController.php';
+  $controller = new LoginController();
+
+  $controller->login();
+});
+
 route('home', function () {
   require_once __DIR__ . '/../app/controllers/HomeController.php';
   $controller = new HomeController();
