@@ -25,6 +25,7 @@
     href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@100..900&display=swap"
     rel="stylesheet" />
 
+  <script src="/public/src/js/header.js"></script>
 </head>
 
 <body>
@@ -53,15 +54,15 @@
 
       <div class="container">
         <div class="text">
-          <a class="text-link" href="/profile">Pedro Gonçaves</a>
-          <a class="text-link" href="/profile">pedro@gmail.com</a>
+          <a class="text-link" href="/profile"><?php echo $_SESSION['name'] ?></a>
+          <a class="text-link" href="/profile"><?php echo $_SESSION['email'] ?></a>
         </div>
 
         <div>
           <a href="/profile" id="perfil-icon">
             <img
               class="profile-img"
-              src="/public/src/img/profile.jpg"
+              src="<?php echo isset($_SESSION['photo']) ? 'data:image/jpeg;base64,' . $_SESSION['photo'] : '/public/src/img/profile.jpg' ?>"
               alt="Foto de Perfil" />
           </a>
         </div>

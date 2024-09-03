@@ -45,9 +45,8 @@ class Login
 
     public function login($email, $password)
     {
-
         //BUSCAR USUÁRIO
-        $sql_consulta = "SELECT password FROM users WHERE email = :email";
+        $sql_consulta = "SELECT id, email, name, password, photo FROM users WHERE email = :email";
         $stmt = $this->conn->prepare($sql_consulta);
         $stmt->bindParam(':email', $email);
         $stmt->execute();
@@ -55,8 +54,15 @@ class Login
 
         if (count($dados) > 0) {
 
-            if (password_verify($password,$dados[0]['password'])) {
+
+            if (password_verify($password, $dados[0]['password'])) {
                 $_SESSION['email'] = $email;
+
+                $_SESSION['id'] = $dados[0]['id'];
+                $_SESSION['email'] = $dados[0]['email'];
+                $_SESSION['name'] = $dados[0]['name'];
+                $_SESSION['photo'] = $dados[0]['photo'];
+
                 header('Location: /home');
                 exit;
             } else {
@@ -67,6 +73,5 @@ class Login
         } else {
             echo 'Email não encontrado.';
         }
-
     }
 }

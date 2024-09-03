@@ -1,9 +1,20 @@
 <?php
+
+session_start();
+
 function route($uri, $callback)
 {
   $requestedUri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+  $openRouters = ['', 'login', 'login/store'];
 
-  if ($uri === $requestedUri) {
+  if (in_array($uri, $openRouters)) {
+    if ($uri === $requestedUri) {
+      $callback();
+      exit;
+    }
+  }
+
+  if ($uri === $requestedUri && isset($_SESSION['id']) && $_SESSION['id'] > 0) {
     $callback();
     exit;
   }
@@ -84,6 +95,23 @@ route('profile', function () {
   layout($controller);
 });
 
-// Caso a rota não seja encontrada
-http_response_code(404);
-echo "404 - Página não encontrada";
+route('profile/photo/edit', function () {
+  require_once __DIR__ . '/../app/controllers/ProfileController.php';
+  $controller = new ProfileController();
+
+  $controller->changePhoto();
+});
+
+route('profile/banner/edit', function () {
+  require_once __DIR__ . '/../app/controllers/ProfileController.php';
+  $controller = new ProfileController();
+
+  $controller->changeBanner();
+});
+
+route('logout', function () {
+  session_destroy();
+  header('Location: /');
+});
+
+header('Location: /');

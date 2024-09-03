@@ -2,12 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const nomeInput = document.getElementById('name');
   const courseInput = document.getElementById('course');
 
-  const profileName = localStorage.getItem('profileName');
-  const profileCourse = localStorage.getItem('profileCourse');
-
-  nomeInput.value = profileName ? profileName : 'Pedro Gonsalves ';
-  courseInput.value = profileCourse ? profileCourse : 'Sistema da Informação ';
-
   nomeInput.addEventListener('focusout', () => {
     const nome = escapeScriptTags(nomeInput.value);
 
@@ -20,8 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
       cancelButtonText: 'Não',
     }).then((e) => {
       if (e.isConfirmed) {
-        localStorage.removeItem('profileName');
-        localStorage.setItem('profileName', nome);
       }
     });
   });
@@ -38,8 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
       cancelButtonText: 'Não',
     }).then((e) => {
       if (e.isConfirmed) {
-        localStorage.removeItem('profileCourse');
-        localStorage.setItem('profileCourse', course);
       }
     });
   });
@@ -48,30 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
 function submitForm() {
   const currentPassword = document.getElementById('current-password').value;
   const newPassword = document.getElementById('new-password').value;
-
-  const error = validaSenha(newPassword);
-
-  if (currentPassword !== usuarios[0].senha) {
-    Swal.fire({
-      title: 'Senha Invalida.',
-      text: 'Senha não condiz com a senha atual.',
-      icon: 'error',
-      confirmButtonText: 'Okay',
-    });
-
-    return;
-  }
-
-  if (error) {
-    Swal.fire({
-      title: 'Senha inválida.',
-      text: error,
-      icon: 'error',
-      confirmButtonText: 'Okay',
-    });
-
-    return;
-  }
 
   Swal.fire({
     title: 'Alterar senha.',
@@ -82,25 +48,20 @@ function submitForm() {
     cancelButtonText: 'Não',
   }).then((e) => {
     if (e.isConfirmed) {
-      Swal.fire({
-        title: 'Senha alterada com sucesso.',
-        text: 'Você alterou sua senha.',
-        icon: 'success',
-        confirmButtonText: 'Okay',
-      });
+      const error = validaSenha(newPassword);
+
+      if (error) {
+        Swal.fire({
+          title: 'Senha inválida.',
+          text: error,
+          icon: 'error',
+          confirmButtonText: 'Okay',
+        });
+
+        return;
+      }
     }
   });
-}
-
-function toggleMenu() {
-  const menu = document.querySelector('.menu');
-  const bars = document.querySelectorAll('.menu-hamburger .bar');
-
-  menu.classList.toggle('show-menu');
-
-  bars[0].classList.toggle('rotate1');
-  bars[1].classList.toggle('rotate2');
-  bars[2].classList.toggle('rotate3');
 }
 
 function escapeScriptTags(input) {
@@ -136,3 +97,87 @@ function validaSenha(pass) {
 
   return null;
 }
+
+document
+  .getElementById('edit-banner-profile')
+  .addEventListener('change', function () {
+    Swal.fire({
+      title: 'Baner.',
+      text: 'Deseja alterar o baner do perfil?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Sim',
+      cancelButtonText: 'Não',
+    }).then((e) => {
+      if (e.isConfirmed) {
+        const formData = new FormData();
+        formData.append('banner', this.files[0]);
+
+        this.files[0] = null;
+        fetch('/profile/banner/edit', {
+          method: 'POST',
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              Swal.fire({
+                title: 'Sucesso!',
+                text: 'Banner alterada com sucesso.',
+                icon: 'success',
+                confirmButtonText: 'Okay',
+              }).then((e) => location.reload());
+            } else {
+              Swal.fire({
+                title: 'Error!',
+                text: data.message,
+                icon: 'error',
+                confirmButtonText: 'Okay',
+              }).then((e) => location.reload());
+            }
+          });
+      }
+    });
+  });
+
+document
+  .getElementById('edit-photo-profile')
+  .addEventListener('change', function () {
+    Swal.fire({
+      title: 'Foto de Perfil.',
+      text: 'Deseja alterar a sua foto de perfil?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Sim',
+      cancelButtonText: 'Não',
+    }).then((e) => {
+      if (e.isConfirmed) {
+        const formData = new FormData();
+        formData.append('image', this.files[0]);
+
+        this.files[0] = null;
+        fetch('/profile/photo/edit', {
+          method: 'POST',
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              Swal.fire({
+                title: 'Sucesso!',
+                text: 'Foto de Perfil alterada com sucesso.',
+                icon: 'success',
+                confirmButtonText: 'Okay',
+              }).then((e) => location.reload());
+            } else {
+              Swal.fire({
+                title: 'Error!',
+                text: data.message,
+                icon: 'error',
+                confirmButtonText: 'Okay',
+              }).then((e) => location.reload());
+            }
+          });
+      }
+    });
+  });

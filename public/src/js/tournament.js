@@ -23,7 +23,7 @@ const rules = document.querySelector('.teams-rules');
 
 // Função para esconder todas as divs de conteúdo
 function hideAll() {
-  [content,].forEach((div) => {
+  [content].forEach((div) => {
     div.classList.remove('show');
   });
 }
@@ -53,17 +53,6 @@ window.addEventListener('load', () => {
   showContent(content); // Mostra o conteúdo do botão 2 por padrão
   setActiveButton(btn2); // Define o botão 2 como ativo
 });
-
-function toggleMenu() {
-  const menu = document.querySelector('.menu');
-  const bars = document.querySelectorAll('.menu-hamburger .bar');
-
-  menu.classList.toggle('show-menu');
-
-  bars[0].classList.toggle('rotate1');
-  bars[1].classList.toggle('rotate2');
-  bars[2].classList.toggle('rotate3');
-}
 
 function escapeScriptTags(input) {
   return input.replace(/>/g, '&amp;').replace(/</g, '&lt;');

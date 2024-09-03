@@ -21,9 +21,6 @@ class TournamentController
     $rules = $_POST['rules'];
     $award = $_POST['award'];
 
-    // Gambiarra ate finalizar a sessão
-    $_SESSION['id'] = 1;
-
     if (strlen($name) <= 0) {
       header("Location: createEvent.php?error=Favor preencher o nome!");
 
