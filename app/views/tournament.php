@@ -1,10 +1,19 @@
 <link rel="stylesheet" href="/public/src/css/tournament.css" />
 <div class="main-content">
   <div class="image-background">
-    <img src="/public/src/img/fundo.jpg" alt="plano de fundo" />
+
+    <!-- <img src="/public/src/img/fundo.jpg" alt="plano de fundo" /> -->
+
+    <!-- Exemplo de imagem base64, basicamente vc tem que adicionar data:image/jpeg;base64, antes de imprimir o valor do base64-->
+    <img src="data:image/jpeg;base64,<?php echo htmlspecialchars($tournament['image']); ?>" alt="plano de fundo" />
+
   </div>
   <div class="text-overlay">
-    <h1 class="main-title">Gamer's Gauntlet</h1>
+
+    <!-- Exemplo de inseção de dados com php -->
+    <h1 class="main-title"><?php echo $tournament['name'] ?></h1>
+
+
     <h2 class="main-description">
       Esse torneio é voltado para estudantes da FIAP de níveis Prata e Ouro.
       Os participantes terão a chance de mostrar suas habilidades e competir

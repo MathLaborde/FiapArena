@@ -4,7 +4,12 @@ class TournamentController
 {
   public function index()
   {
-    // Renderiza a view
+    require_once __DIR__ . '/../models/TournamentModel.php';
+
+    $tournamentObject = new Tournament();
+
+    $tournament = $tournamentObject->getById($_GET['id']);
+
     require_once __DIR__ . '/../views/tournament.php';
   }
 
@@ -57,8 +62,8 @@ class TournamentController
 
       $result = $tournament->store($name, $description, $base64Img, $base64ShortImg, $rules, $award, $_SESSION['id']);
 
-      if ($result) {
-        header("Location: /tournament/new/?success=true");
+      if ($result > 0) {
+        header("Location: /tournament/new/?success=true&id=$result");
         exit();
       }
 

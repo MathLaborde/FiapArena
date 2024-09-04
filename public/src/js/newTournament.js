@@ -195,6 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const urlParams = new URLSearchParams(queryString);
 
   const success = urlParams.get('success');
+  const id = urlParams.get('id');
   const errorMessage = urlParams.get('error');
 
   if (errorMessage) {
@@ -217,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
       icon: 'success',
       confirmButtonText: 'Okay',
     }).then((e) => {
-      window.location.href = '/tournament';
+      window.location.href = '/tournament?id=' + id;
     });
   }
 });
