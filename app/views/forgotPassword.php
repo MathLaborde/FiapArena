@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Esqueceu a Senha</title>
+  <title>Página de Login</title>
   <link rel="icon" href="/public/src/img/MiniLogo.png" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="/public/src/css/reset.css" />
-  <link rel="stylesheet" href="/public/src/css/login.css" />
+  <link rel="stylesheet" href="/public/src/css/forgotPassword.css" />
 
   <!-- JS & SweetAlert2 -->
   <script src="/public/src/js/index.js"></script>
@@ -21,8 +21,6 @@
   <link
     href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
     rel="stylesheet" />
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,27 +34,29 @@
 </head>
 
 <body>
-  <div class="main-login">
-    <div class="left-login">
-      <h2>Saudações!!<br>Venha descobrir e se divertir em nossa plataforma.</h2>
+  <div class="main-forgot">
+    <div class="left-forgot">
+      <h2>Esqueceu sua senha?<br>Não se preocupre, iremos te ajudar!</h2>
       <img src="/public/src/img/login.svg" alt="">
     </div>
 
-    <div class="right-login">
-      <div class="card-login">
-          <h2>Bem Vindo(a)!<br>Acesse nossa plataforma</h2>
-          <form action="" method="post">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br><br>
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
-            <br><br>
-            <button onclick="fazerLogin()" id="login" class="btn-login" type="submit">Entrar</button>
-          </form>
+    <div class="right-forgot" id="passwordDiv">
+        <div class="card-forgot">
 
-          <a href="/login/forgot">Esqueceu a sua senha?</a>
-          <a href="">Criar uma conta</a>
+            <h2>Solicite a redefinição de senha</h2>
+            <h3>Informe seu email abaixo:</h3>
+
+            <form action="" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="emailPass" name="emailPass" required>
+            </form>
+
+            <p>
+                *Você receberá um código de verificação por e-mail. Insira esse código na tela seguinte. Verifique se seu e-mail está correto e corresponde à conta que deseja recuperar.
+            </p>
+
+            <button class="btn-forgot" onclick="enviarEmail()">Obter Código</button>
+
         </div>
     </div>
 

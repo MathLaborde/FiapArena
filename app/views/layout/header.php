@@ -62,7 +62,7 @@
           <a href="/profile" id="perfil-icon">
             <img
               class="profile-img"
-              src="<?php echo isset($_SESSION['photo']) ? 'data:image/jpeg;base64,' . $_SESSION['photo'] : '/public/src/img/profile.jpg' ?>"
+              src="<?php echo isset($_SESSION['photo']) && $_SESSION['photo'] != '' ? 'data:image/jpeg;base64,' . $_SESSION['photo'] : '/public/src/img/profile.jpg' ?>"
               alt="Foto de Perfil" />
           </a>
         </div>

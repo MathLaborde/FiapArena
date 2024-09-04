@@ -5,7 +5,7 @@ session_start();
 function route($uri, $callback)
 {
   $requestedUri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
-  $openRouters = ['', 'login', 'login/store'];
+  $openRouters = ['', 'login', 'login/store', 'login/forgot'];
 
   if (in_array($uri, $openRouters)) {
     if ($uri === $requestedUri) {
@@ -51,6 +51,13 @@ route('login', function () {
   $controller = new LoginController();
 
   $controller->login();
+});
+
+route('login/forgot', function () {
+  require_once __DIR__ . '/../app/controllers/LoginController.php';
+  $controller = new LoginController();
+
+  $controller->forgot();
 });
 
 route('home', function () {

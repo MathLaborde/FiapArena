@@ -28,4 +28,8 @@ class LoginController
 
     $login->login($email, $senha);
   }
+  public function forgot()
+  {
+    require_once __DIR__ . '/../views/forgotPassword.php';
+  }
 }

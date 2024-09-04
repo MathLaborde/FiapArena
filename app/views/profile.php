@@ -2,7 +2,7 @@
 <div class="main-content">
   <div class="container-principal">
     <img
-      src="<?php echo isset($user['banner']) ? 'data:image/jpeg;base64,' . $user['banner'] : '/public/src/img/banner.jpg' ?>"
+      src="<?php echo isset($user['banner']) && $user['banner'] != '' ? 'data:image/jpeg;base64,' . $user['banner'] : '/public/src/img/banner.jpg' ?>"
       alt="Imagem de fundo"
       id="background-image" />
 
@@ -14,7 +14,7 @@
       <div class="profile-column">
         <div class="profile-circle">
           <img
-            src="<?php echo isset($_SESSION['photo']) ? 'data:image/jpeg;base64,' . $_SESSION['photo'] : '/public/src/img/profile.jpg' ?>"
+            src="<?php echo isset($_SESSION['photo']) && $_SESSION['photo'] != '' ? 'data:image/jpeg;base64,' . $_SESSION['photo'] : '/public/src/img/profile.jpg' ?>"
             alt="Foto de Perfil Cat"
             id="profile-picture" />
         </div>
