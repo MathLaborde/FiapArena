@@ -92,4 +92,40 @@ class ProfileController
     }
     die('{ "success": false, "message": "Falha ao alterar o banner."}');
   }
+
+  public function edit()
+  {
+    $name = $_POST['name'];
+    $course = $_POST['course'];
+
+    require_once __DIR__ . '/../models/UserModel.php';
+
+    $user = new User();
+
+    $result = $user->edit($name, $course);
+
+    if ($result) {
+      die('{ "success": true, "message": "Dados alterados com sucesso."}');
+    } else {
+      die('{ "success": false, "message": "Falha ao alterar dados."}');
+    }
+  }
+
+  public function password()
+  {
+    $currentPassword = $_POST['currentPassword'];
+    $newPassword = $_POST['newPassword'];
+
+    require_once __DIR__ . '/../models/UserModel.php';
+
+    $user = new User();
+
+    $result = $user->password($currentPassword, $newPassword);
+
+    if ($result) {
+      die('{ "success": true, "message": "Senha alterada com sucesso."}');
+    } else {
+      die('{ "success": false, "message": "Senha atual errada."}');
+    }
+  }
 }
