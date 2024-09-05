@@ -1,5 +1,4 @@
-// script para rolagem de seção (ancora)
-
+// Script para rolagem de seção (âncora)
 document.querySelector('.down-arrow').addEventListener('click', function () {
   const element = document.querySelector('.bottons');
   const yOffset = -100;
@@ -11,63 +10,27 @@ document.querySelector('.down-arrow').addEventListener('click', function () {
   });
 });
 
-// fim da rolagem de seção (ancora)
+document.addEventListener('DOMContentLoaded', () => {
+  const awardBox = document.getElementById('box-teamsaward');
+  const rulesBox = document.getElementById('box-teamsrules');
+  const participantsBox = document.getElementById('box-teams-createby');
 
-const btn1 = document.querySelector('.btn1');
-const btn2 = document.querySelector('.btn2');
-const btn3 = document.querySelector('.btn3');
+  const showBox = (boxToShow) => {
+    awardBox.classList.remove('show');
+    rulesBox.classList.remove('show');
+    participantsBox.classList.remove('show');
+    boxToShow.classList.add('show');
+  };
 
-const content = document.querySelector('.teams-content');
-const award = document.querySelector('.teams-award');
-const rules = document.querySelector('.teams-rules');
-
-// Função para esconder todas as divs de conteúdo
-function hideAll() {
-  [content].forEach((div) => {
-    div.classList.remove('show');
+  document.getElementById('show-rules').addEventListener('click', () => {
+    showBox(rulesBox);
   });
-}
 
-// Função para mostrar a div selecionada
-function showContent(divToShow) {
-  hideAll(); // Esconde todas as divs
-  divToShow.classList.add('show'); // Mostra a div desejada
-}
+  document.getElementById('show-participants').addEventListener('click', () => {
+    showBox(participantsBox);
+  });
 
-// Adiciona eventos de clique para cada botão
-btn1.addEventListener('click', () => {
-  showContent(rules);
-  setActiveButton(btn1);
-});
-btn2.addEventListener('click', () => {
-  showContent(content);
-  setActiveButton(btn2);
-});
-btn3.addEventListener('click', () => {
-  showContent(award);
-  setActiveButton(btn3);
-});
-
-// Simula um clique no botão btn2 quando a página é carregada
-window.addEventListener('load', () => {
-  showContent(content); // Mostra o conteúdo do botão 2 por padrão
-  setActiveButton(btn2); // Define o botão 2 como ativo
-});
-
-function escapeScriptTags(input) {
-  return input.replace(/>/g, '&amp;').replace(/</g, '&lt;');
-}
-
-const chat = document.getElementById('chat');
-
-const chatBnt = document.getElementById('enviar-chat');
-
-chatBnt.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  if (chat.length <= 0) {
-    return;
-  }
-
-  const message = escapeScriptTags(chat.value);
+  document.getElementById('show-award').addEventListener('click', () => {
+    showBox(awardBox);
+  });
 });
