@@ -56,7 +56,7 @@
           </form>
 
           <a href="/login/forgot">Esqueceu a sua senha?</a>
-          <a href="">Criar uma conta</a>
+          <a href="/login/register">Criar uma conta</a>
         </div>
     </div>
 

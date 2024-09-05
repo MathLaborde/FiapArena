@@ -32,4 +32,8 @@ class LoginController
   {
     require_once __DIR__ . '/../views/forgotPassword.php';
   }
+  public function register()
+  {
+    require_once __DIR__ . '/../views/register.php';
+  }
 }

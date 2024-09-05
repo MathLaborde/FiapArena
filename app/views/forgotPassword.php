@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Página de Login</title>
+  <title>Esqueceu a senha?</title>
   <link rel="icon" href="/public/src/img/MiniLogo.png" />
 
   <!-- CSS -->
@@ -37,7 +37,7 @@
   <div class="main-forgot">
     <div class="left-forgot">
       <h2>Esqueceu sua senha?<br>Não se preocupre, iremos te ajudar!</h2>
-      <img src="/public/src/img/login.svg" alt="">
+      <img src="/public/src/img/forgot.svg" alt="">
     </div>
 
     <div class="right-forgot" id="passwordDiv">
@@ -52,7 +52,7 @@
             </form>
 
             <p>
-                *Você receberá um código de verificação por e-mail. Insira esse código na tela seguinte. Verifique se seu e-mail está correto e corresponde à conta que deseja recuperar.
+                ** Você receberá um código de verificação por e-mail. Insira esse código na tela seguinte. Verifique se seu e-mail está correto e corresponde à conta que deseja recuperar.
             </p>
 
             <button class="btn-forgot" onclick="enviarEmail()">Obter Código</button>
