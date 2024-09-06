@@ -10,10 +10,14 @@ document.addEventListener('DOMContentLoaded', function () {
       const src = `${thumbnail.getAttribute('data-img')}`;
       const dataText = thumbnail.getAttribute('data-text');
       const large = thumbnail.getAttribute('data-large-text');
+      const href = thumbnail.getAttribute('data-href');
+
+      // explore-button
 
       displayImage.src = src;
       text.textContent = dataText;
       largeText.textContent = large;
+      exploreButton.href = href;
 
       // Adicionando a imagem como fundo da página
       document.body.style.backgroundImage = `url(${src})`;

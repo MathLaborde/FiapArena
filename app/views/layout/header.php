@@ -54,8 +54,8 @@
 
       <div class="container">
         <div class="text">
-          <!-- <a class="text-link" href="/profile"><?php echo $_SESSION['name'] ?></a>
-          <a class="text-link" href="/profile"><?php echo $_SESSION['email'] ?></a> -->
+          <a class="text-link" href="/profile"><?php echo $_SESSION['name'] ?></a>
+          <a class="text-link" href="/profile"><?php echo $_SESSION['email'] ?></a>
         </div>
 
         <div>

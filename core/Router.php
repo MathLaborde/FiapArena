@@ -14,7 +14,7 @@ function route($uri, $callback)
     }
   }
 
-  if ($uri === $requestedUri) {
+  if ($uri === $requestedUri && isset($_SESSION['id']) && $_SESSION['id'] > 0) {
     $callback();
     exit;
   }
@@ -142,4 +142,4 @@ route('logout', function () {
   header('Location: /');
 });
 
-// header('Location: /');
+header('Location: /');

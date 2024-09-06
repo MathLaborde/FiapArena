@@ -16,12 +16,13 @@
             data-img="data:image/jpeg;base64,<?php echo htmlspecialchars($tournament['image']); ?>"
             data-id="<?php echo htmlspecialchars($tournament['id']); ?>"
             data-large-text="<?php echo htmlspecialchars($tournament['name']); ?>"
-            data-text="<?php echo htmlspecialchars($tournament['description']); ?>" />
+            data-text="<?php echo htmlspecialchars($tournament['description']); ?>"
+            data-href="/tournament?id=<?php echo htmlspecialchars($tournament['id']); ?>" />
         <?php } ?>
 
       </div>
 
-      <div class="display-area">
+      <div class=" display-area">
         <div class="display-container">
           <img
             src="./src/img/LeagueofLegends.png"
@@ -34,7 +35,7 @@
               Duas equipes com 5 jogadores; controle do jogador, defesa do mapa e
               destruição do território inimigo
             </div>
-            <a href="/tournament?id=<?php echo htmlspecialchars($tournament['id']); ?>" class="explore-button">
+            <a href="/" class="explore-button">
               <i class="fa-solid"></i>Explore</a>
           </div>
         </div>

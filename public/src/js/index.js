@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
   const cMail = document.getElementById('cmailAcc');
   const emailBox = document.getElementById('emailBox');
 
-  password.addEventListener('input', (e) => {
+  password?.addEventListener('input', (e) => {
     e.preventDefault();
 
     const pass = e.target.value;
@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
     return;
   });
 
-  cPassword.addEventListener('input', (e) => {
+  cPassword?.addEventListener('input', (e) => {
     e.preventDefault();
 
     if (password.value !== cPassword.value) {
@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
     }
   });
 
-  cMail.addEventListener('input', (e) => {
+  cMail?.addEventListener('input', (e) => {
     e.preventDefault();
     const email = escapeScriptTags(document.getElementById('emailAcc').value);
     if (cMail.value !== email) {
@@ -47,6 +47,36 @@ window.addEventListener('load', () => {
       emailBox.innerHTML = ``;
     }
   });
+
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+
+  const success = urlParams.get('success');
+  const errorMessage = urlParams.get('error');
+
+  if (errorMessage) {
+    Swal.fire({
+      title: 'Erro!',
+      text: 'Erro ao criar o usuário.',
+      icon: 'error',
+      confirmButtonText: 'Okay',
+    }).then((e) => {
+      window.location.href = '/login/register';
+    });
+
+    return;
+  }
+
+  if (success) {
+    Swal.fire({
+      title: 'Sucesso!',
+      text: 'Usuario criado com sucesso.',
+      icon: 'success',
+      confirmButtonText: 'Okay',
+    }).then((e) => {
+      window.location.href = '/';
+    });
+  }
 });
 function changedPath(path) {
   const login = document.getElementById('login');
@@ -125,7 +155,11 @@ function enviarEmail() {
   });
 }
 
-function enviarDados() {
+const form = document.getElementById('register');
+
+form?.addEventListener('submit', (e) => {
+  e.preventDefault();
+
   const user = escapeScriptTags(document.getElementById('userAcc').value);
   const senha = escapeScriptTags(document.getElementById('passwordAcc').value);
   const cSenha = escapeScriptTags(
@@ -198,16 +232,8 @@ function enviarDados() {
     return;
   }
 
-  usuarios.push({ user, senha, email });
-
-  Swal.fire({
-    title: 'Sucesso!',
-    text: 'Usuario criado com sucesso!',
-    icon: 'success',
-  }).then((e) => {
-    window.location.href = '/home';
-  });
-}
+  form.submit();
+});
 
 function validaSenha(pass) {
   const regexMaiuscula = /[A-Z]/;

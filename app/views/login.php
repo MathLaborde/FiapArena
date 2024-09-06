@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt=br">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Esqueceu a Senha</title>
+  <title>Login</title>
   <link rel="icon" href="/public/src/img/MiniLogo.png" />
 
   <!-- CSS -->
@@ -44,23 +45,24 @@
 
     <div class="right-login">
       <div class="card-login">
-          <h2>Bem Vindo(a)!<br>Acesse nossa plataforma</h2>
-          <form action="" method="post">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br><br>
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
-            <br><br>
-            <button onclick="fazerLogin()" id="login" class="btn-login" type="submit">Entrar</button>
-          </form>
+        <h2>Bem Vindo(a)!<br>Acesse nossa plataforma</h2>
+        <form action="/login" method="post">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <br><br>
+          <label for="password">Senha:</label>
+          <input type="password" id="password" name="password" required>
+          <br><br>
+          <button onclick="" id="login" class="btn-login" type="submit">Entrar</button>
+        </form>
 
-          <a href="/login/forgot">Esqueceu a sua senha?</a>
-          <a href="/login/register">Criar uma conta</a>
-        </div>
+        <a href="/login/forgot">Esqueceu a sua senha?</a>
+        <a href="/login/register">Criar uma conta</a>
+      </div>
     </div>
 
   </div>
 
 </body>
+
 </html>

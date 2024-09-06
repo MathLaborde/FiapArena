@@ -26,7 +26,7 @@ class Login
 
 
         if (count($dados) > 0) {
-            echo "O e-mail já está em uso.";
+            header('Location: /?error=true');
         } else {
             // EXECUTANDO A QUERY
             $sql = "INSERT INTO users (name, email, password) VALUES (:name, :email, :password)";
@@ -36,9 +36,9 @@ class Login
             $stmt->bindParam(":password", $hashed_password);
 
             if ($stmt->execute()) {
-                header('Location: /');
+                header('Location: /?success=true');
             } else {
-                echo "Erro: " . $this->conn->errorInfo();
+                header('Location: /?error=true');
             }
         }
     }
