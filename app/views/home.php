@@ -1,8 +1,6 @@
 <link rel="stylesheet" href="/public/src/css/home.css">
 
 <div class="main-content">
-  <h1 class="main-title">Bem-vindo ao FIAP Arena</h1>
-
   <?php if (count($tournaments) > 0) { ?>
     <div class="carousel-container">
       <div class="carousel">
