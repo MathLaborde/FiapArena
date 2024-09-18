@@ -37,7 +37,7 @@
         <?php if (count($participants) > 0) { ?>
           <?php foreach ($participants as $participant) { ?>
             <li>
-              <img src="<?php echo $participant['photo'] === '' ? 'http://localhost/public/src/img/profile.jpg' : 'data:image/jpeg;base64,' . $participant['photo'] ?>" alt="">
+              <img src="<?php echo $participant['photo'] === '' || $participant['photo'] == null ? 'http://localhost/public/src/img/profile.jpg' : 'data:image/jpeg;base64,' . $participant['photo'] ?>" alt="">
               <p><?php echo $participant['name'] ?></p>
             </li>
           <?php } ?>
