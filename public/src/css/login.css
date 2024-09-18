@@ -100,4 +100,6 @@ button:hover {
 
 a {
   margin-bottom: 5px;
+  color: blue;
+  text-decoration: underline;
 }

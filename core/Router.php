@@ -95,6 +95,13 @@ route('tournament/store', function () {
   $controller->store();
 });
 
+route('tournament/participant', function () {
+  require_once __DIR__ . '/../app/controllers/TournamentController.php';
+  $controller = new TournamentController();
+
+  $controller->participant();
+});
+
 route('ranking', function () {
   require_once __DIR__ . '/../app/controllers/RankingController.php';
   $controller = new RankingController();

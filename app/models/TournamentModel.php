@@ -61,4 +61,40 @@ class Tournament
 
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
+
+  public function getParticipants($id)
+  {
+
+    $query = 'SELECT
+        u.name,
+        u.photo
+      FROM
+        participants p
+      INNER JOIN tournament t ON p.id_tournament = t.id
+      INNER JOIN users u ON p.id_user = u.id
+      WHERE t.id = :id';
+
+    $stmt = $this->conn->prepare($query);
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+  public function participant($id, $user)
+  {
+    $sql = "INSERT INTO participants (`id_tournament`, `id_user`) 
+                              VALUES (:id,  :user)";
+
+    $stmt = $this->conn->prepare($sql);
+
+    $stmt->bindParam(':id', $id);
+    $stmt->bindParam(':user', $user);
+
+    // Executa a query
+    if ($stmt->execute()) {
+      return true;
+    }
+
+    return false;
+  }
 }

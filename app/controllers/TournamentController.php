@@ -9,6 +9,7 @@ class TournamentController
     $tournamentObject = new Tournament();
 
     $tournament = $tournamentObject->getById($_GET['id']);
+    $participants = $tournamentObject->getParticipants($_GET['id']);
 
     require_once __DIR__ . '/../views/tournament.php';
   }
@@ -70,6 +71,28 @@ class TournamentController
       header("Location: /tournament/new/?error=Falha ao criar torneio");
     } catch (\Throwable $th) {
       header("Location: /tournament/new/?error=Falha ao criar torneio");
+    }
+  }
+
+  public function participant()
+  {
+    try {
+      require_once __DIR__ . '/../models/TournamentModel.php';
+
+      $tournament = new Tournament();
+
+      $id = $_GET['id'];
+
+      $result = $tournament->participant($id, $_SESSION['id']);
+
+      if ($result) {
+        header("Location: /tournament?id=$id&success=Inscrição finalizada com sucesso!");
+        exit();
+      }
+
+      header("Location: /tournament?id=$id&error=Falha na inscrição do Torneio");
+    } catch (\Throwable $th) {
+      header("Location: /tournament?id=$id&error=Falha na inscrição do Torneio");
     }
   }
 }

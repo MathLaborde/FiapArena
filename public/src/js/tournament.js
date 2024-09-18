@@ -33,4 +33,36 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('show-award').addEventListener('click', () => {
     showBox(awardBox);
   });
+
+
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+
+  const success = urlParams.get('success');
+  const errorMessage = urlParams.get('error');
+  const id = urlParams.get('id');
+
+  if (errorMessage) {
+    Swal.fire({
+      title: 'Erro!',
+      text: errorMessage,
+      icon: 'error',
+      confirmButtonText: 'Okay',
+    }).then((e) => {
+      window.location.href = '/tournament?id=' + id;
+    });
+
+    return;
+  }
+
+  if (success) {
+    Swal.fire({
+      title: 'Sucesso!',
+      text: success,
+      icon: 'success',
+      confirmButtonText: 'Okay',
+    }).then((e) => {
+      window.location.href = '/tournament?id=' + id;
+    });
+  }
 });

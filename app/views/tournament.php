@@ -1,15 +1,15 @@
 <link rel="stylesheet" href="/public/src/css/tournament.css" />
 <div class="main-content">
   <div class="image-background">
-  <div class="text-overlay">
-<!-- Inseção de dados com php -->
-<h1 class="main-title"><?php echo $tournament['name'] ?></h1>
-<div class="align-arrow">
+    <div class="text-overlay">
+      <!-- Inseção de dados com php -->
+      <h1 class="main-title"><?php echo $tournament['name'] ?></h1>
+      <div class="align-arrow">
         <div class="down-arrow"></div>
-  </div>
-<p class="main-description"><?php echo $tournament['description'] ?></p>
+      </div>
+      <p class="main-description"><?php echo $tournament['description'] ?></p>
 
-  </div>
+    </div>
 
     <!-- <img src="/public/src/img/fundo.jpg" alt="plano de fundo" /> -->
 
@@ -25,17 +25,34 @@
 </div>
 
 <div class="informations">
-  <div id="box-teamsaward" class="box-teamsaward">
-    <h1 class="teams-award"><?php echo $tournament['award'] ?></h1>
-  </div>
-
   <div id="box-teamsrules" class="box-teamsrules">
     <h1 class="teams-award"><?php echo $tournament['rules'] ?></h1>
   </div>
 
-  <div id="box-teams-createby" class="box-teams-createby">
-  <a href="https://www.fiap.com.br/" class="invite-button">Convidar amigos</a>
-</div>
+  <div id="box-teams-createby" class="box-teams-createby show">
+    <div class="main-teams">
+      <h1>Participantes</h1>
+
+      <ul>
+        <?php if (count($participants) > 0) { ?>
+          <?php foreach ($participants as $participant) { ?>
+            <li>
+              <img src="<?php echo $participant['photo'] === '' ? 'http://localhost/public/src/img/profile.jpg' : 'data:image/jpeg;base64,' . $participant['photo'] ?>" alt="">
+              <p><?php echo $participant['name'] ?></p>
+            </li>
+          <?php } ?>
+        <?php } else { ?>
+          <li>Nenhum participante cadastrado.</li>
+        <?php } ?>
+      </ul>
+
+      <a class="invite-button" href="/tournament/participant?id=<?php echo $tournament['id'] ?>">Participar</a>
+    </div>
+  </div>
+
+  <div id="box-teamsaward" class="box-teamsaward">
+    <h1 class="teams-award"><?php echo $tournament['award'] ?></h1>
+  </div>
 
 </div>
 

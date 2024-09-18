@@ -26,7 +26,7 @@ class Login
 
 
         if (count($dados) > 0) {
-            header('Location: /?error=true');
+            header('Location: /login/register?error=Email já em uso, favor usar outro email ou fazer a recupeação de senha!');
         } else {
             // EXECUTANDO A QUERY
             $sql = "INSERT INTO users (name, email, password) VALUES (:name, :email, :password)";
@@ -36,9 +36,9 @@ class Login
             $stmt->bindParam(":password", $hashed_password);
 
             if ($stmt->execute()) {
-                header('Location: /?success=true');
+                header('Location: /login/register?success=Usuario criado com sucesso!');
             } else {
-                header('Location: /?error=true');
+                header('Location: /login/register?error=Erro ao criar usuario!');
             }
         }
     }
@@ -66,12 +66,12 @@ class Login
                 header('Location: /home');
                 exit;
             } else {
-                echo $dados[0]['password'] . '<br>';
-                echo $password . '<br>';
-                echo 'Senha Incorreta.';
+                header('Location: /?error=Email ou senha incorreta');
+                exit;
             }
         } else {
-            echo 'Email não encontrado.';
+            header('Location: /?error=Email ou senha incorreta');
+            exit;
         }
     }
 }

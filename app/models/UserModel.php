@@ -26,7 +26,7 @@ class User
   {
     $_SESSION['photo'] = $file;
 
-    $sql = "UPDATE users SET photo=:photo WHERE :id";
+    $sql = "UPDATE users SET photo=:photo WHERE id = :id";
 
     $stmt = $this->conn->prepare($sql);
 
@@ -44,7 +44,7 @@ class User
   public function changeBanner($file)
   {
 
-    $sql = "UPDATE users SET banner=:banner WHERE :id";
+    $sql = "UPDATE users SET banner=:banner WHERE id = :id";
 
     $stmt = $this->conn->prepare($sql);
 

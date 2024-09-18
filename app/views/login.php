@@ -13,17 +13,7 @@
   <link rel="stylesheet" href="/public/src/css/login.css" />
 
   <!-- JS & SweetAlert2 -->
-  <script src="/public/src/js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet" />
-  <link
-    href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
-    rel="stylesheet" />
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,14 +36,14 @@
     <div class="right-login">
       <div class="card-login">
         <h2>Bem Vindo(a)!<br>Acesse nossa plataforma</h2>
-        <form action="/login" method="post">
+        <form action="/login" id="login" method="post">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
-          <br><br>
+          <br>
           <label for="password">Senha:</label>
           <input type="password" id="password" name="password" required>
           <br><br>
-          <button onclick="" id="login" class="btn-login" type="submit">Entrar</button>
+          <button class="btn-login" type="submit">Entrar</button>
         </form>
 
         <a href="/login/forgot">Esqueceu a sua senha?</a>
@@ -63,6 +53,8 @@
 
   </div>
 
+
+  <script src="/public/src/js/login.js"></script>
 </body>
 
 </html>

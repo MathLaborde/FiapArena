@@ -103,10 +103,10 @@
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 16px 20px;
   border: none;
   border-radius: 5px;
-  color: white;
+  color: black;
   font-size: 16px;
   cursor: pointer;
   background-color: #07F3F3; /* Default background color */
@@ -123,6 +123,7 @@
 
 .btn2 {
   background-color: #F20675;
+  color: white;
 }
 
 .btn3 {
@@ -166,7 +167,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  display: block; /* Temporarily visible */
+  display: none; /* Hide all by default */
   padding: 20px; /* Optional: Add padding to the container */
 }
 
@@ -204,7 +205,6 @@
   height: 60%;
   width: 70%;
   background-color: #2e2c2d;
-  margin: auto;
   position: absolute; /* Permanece para posicionamento dentro do container pai */
   top: 50%; /* Posiciona verticalmente no meio da tela */
   left: 50%; /* Posiciona horizontalmente no meio da tela */
@@ -213,35 +213,66 @@
   display: flex; /* Ativa o flexbox */
   align-items: center; /* Centraliza verticalmente o conteúdo */
   justify-content: center; /* Centraliza horizontalmente o conteúdo */
-  display: none; /* Esconde todos por padrão */
+  display: none; /* Temporarily visible */
 }
 
 .invite-button {
-  height: 100%;
-  width: 100%;
   background-color: #07F3F3; /* Cor de fundo do botão */
-  color: #fafafa; /* Cor do texto */
-  padding: 15px 30px; /* Espaçamento interno do botão */
+  color: black; /* Cor do texto */
+  padding: 8px 16px; /* Espaçamento interno do botão */
   text-decoration: none; /* Remove sublinhado do link */
   text-align: center;
-  border-radius: 5px; /* Bordas arredondadas */
-  position: absolute;
-  font-size: 25px; /* Tamanho da fonte */
+  border: 1px solid #058b8b;
+  border-radius: 8px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte */
   font-weight: bold; /* Negrito */
   transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
 }
 
-
 .invite-button:hover {
+  border: 1px solid #6e0436;
+  cursor: pointer;
   background-color: #F20675; /* Cor de fundo ao passar o mouse */
 }
-
-
 
 /* Optional styling for visibility */
 .box-teamsaward.show, .box-teamsrules.show, .box-teams-createby.show {
   display: block; /* Show when the .show class is added */
 }
 
+.main-teams {
+  width: 100%;
+  height: 100%;
+  padding: 32px 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.main-teams > h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
 
+.main-teams ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #3d3a3b;
+  min-width: 300px;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.main-teams ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.main-teams ul li img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

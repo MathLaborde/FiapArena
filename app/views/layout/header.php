@@ -47,7 +47,7 @@
             <a class="nav-link <?php echo $uri === 'ranking' ? 'active' : '' ?>" href="/ranking">Classificação</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?php echo $uri === 'suporte' ? 'active' : '' ?>" href="#">Suporte</a>
+            <a class="nav-link <?php echo $uri === 'suporte' ? 'active' : '' ?>" href="mailto:rm557797@fiap.com.br">Suporte</a>
           </li>
         </ul>
       </div>
@@ -77,7 +77,7 @@
         <li><a class="active" href="#">Página Inicial</a></li>
         <li><a href="/tournament/new">Criar Torneio </a></li>
         <li><a href="/ranking">Classificação</a></li>
-        <li><a href="#">Suporte</a></li>
+        <li><a href="mailto:rm557797@fiap.com.br">Suporte</a></li>
       </ul>
     </nav>
   </header>
