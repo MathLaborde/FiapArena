@@ -92,7 +92,7 @@ Durante o desenvolvimento deste projeto, os integrantes da equipe aprofundaram c
 
 ## 👨‍💻 Equipe
 
-Projeto desenvolvido por alunos da **FIAP** no módulo de **Aplicação Web Integrada à Segurança Cibernética**.
+Projeto desenvolvido por alunos da **FIAP** no módulo de **CyberSecurity & GameWeb**.
 
 ---
 
