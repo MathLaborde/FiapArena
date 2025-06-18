@@ -1,6 +1,6 @@
 # 🏆🎮 FIAP ARENA – Plataforma de Torneios Digitais
 
-## 📘 Visão Geral
+## 🗒️ Sobre o projeto
 
 **FIAP ARENA** é uma plataforma web desenvolvida para a criação e gestão de torneios de jogos digitais, destinada a alunos e professores. O projeto tem como objetivo fortalecer o engajamento, a socialização e a colaboração no ambiente educacional por meio de competições recreativas.
 
@@ -10,7 +10,7 @@ O sistema foi desenvolvido com foco em segurança cibernética, utilizando boas 
 
 ---
 
-## 🚀 Funcionalidades
+## ⚙️ Funcionalidades
 
 - Criação e gerenciamento de torneios e jogos digitais;
 - Cadastro e autenticação segura de usuários;
@@ -78,7 +78,7 @@ O desenvolvimento da FIAP ARENA seguiu práticas essenciais de segurança web, i
 
 ---
 
-## 📚 Aprendizados
+## 🧠 Aprendizados
 
 Durante o desenvolvimento deste projeto, os integrantes da equipe aprofundaram conhecimentos em:
 
