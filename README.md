@@ -59,22 +59,26 @@ O desenvolvimento da FIAP ARENA seguiu práticas essenciais de segurança web, i
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/fiap-arena.git
+   git clone https://github.com/MathLaborde/FiapArena.git
 
 2. Mova os arquivos para a pasta do seu servidor local (exemplo: htdocs no XAMPP).
 
-3. Importe o banco de dados:
+3. Abra o XAMPP e dê 'start' no Apache e MySQL.
+
+4. Importe o banco de dados:
     - Acesse o phpMyAdmin;
     - Crie um banco de dados chamado fiap_arena;
-    - Importe o arquivo fiap_arena.sql localizado no repositório.
+    - Importe o arquivo fiaparena.sql localizado no repositório.
 
-4. Configure os parâmetros de conexão com o banco de dados no arquivo config.php (ou equivalente).
+5. Configure os parâmetros de conexão com o banco de dados no arquivo config.php (ou equivalente).
 
-5. Inicie o servidor local (Apache e MySQL).
+6. Inicie o servidor local (Apache e MySQL).
 
-6. No navegador, acesse:
+7. No navegador, acesse:
    ```bash
-   http://localhost/fiap-arena
+   http://localhost/FiapArena
+
+8. Obs: temos um arquivo chamado torneios.txt dentro do repositório para ajudar na criação de alguns torneios, para realização de testes.
 
 ---
 
