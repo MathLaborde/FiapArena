@@ -19,16 +19,16 @@ O sistema foi desenvolvido com foco em segurança cibernética, utilizando boas 
 ![Página Criar Conta](public/imagens-projeto/criar-conta.png)
 
 ### Página Inicial
-![Página Inicial](public/images/pagina-inicial.png)
+![Página Inicial](public/imagens-projeto/pagina-inicial.png)
 
 ### Página Criar Torneio
-![Página Criar Torneio](public/images/criar-torneio.png)
+![Página Criar Torneio](public/imagens-projeto/criar-torneio.png)
 
 ### Página Descrição Torneio
-![Página Descrição Torneio](public/images/descrição-torneio.png)
+![Página Descrição Torneio](public/imagens-projeto/descriçao-torneio.png)
 
 ### Página Ranking
-![Página Ranking](public/images/ranking.png)
+![Página Ranking](public/imagens-projeto/ranking.png)
 
 ---
 
